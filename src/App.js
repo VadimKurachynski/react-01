@@ -4,7 +4,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     новая
+
+
+     New
+     <div className='tu'>это новое</div>
+
+
     </div>
   );
 }
