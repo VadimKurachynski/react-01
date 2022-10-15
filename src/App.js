@@ -3,9 +3,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-    <div><Header /></div>
-     <div className='tu'>это новое React приложение</div>
+   <div>
+    <Header />
+    <Footer />
     </div>
   );
 }
@@ -16,6 +16,16 @@ const Header=()=> {
     <div>Первая</div>
     <div>Вторая</div>
     <div>Третья</div> 
+    </div>
+  );
+}
+
+const Footer=()=> {
+  return (
+   <div>
+    <div>Первая1</div>
+    <div>Вторая2</div>
+    <div>Третья3</div> 
     </div>
   );
 }
