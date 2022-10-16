@@ -7,7 +7,7 @@ import Content from './content';
 function App() {
   return (
    <div>
-    <Header />
+    {/* <Header /> */}
     <Content />
     <Technologies />
     <Footer />
