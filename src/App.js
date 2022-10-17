@@ -1,18 +1,23 @@
 // import logo from './logo.svg';
-import Technologies from './Tecnologies';
-import Footer from './Footer';
-import Content from './content';
-import Header from './Header';
+
+
 
 
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Content />
-      <Technologies />
-      <Footer />
+    <div className="">
+     <header>
+      <img src="https://1757140519.rsc.cdn77.org/static/v3/img/products/logo.png"/>
+     </header>
+<nav>
+  <div>Profile</div>
+  <div>Profile</div>
+</nav>
+<div>
+  Main content
+</div>
+
 
     </div>
   );
