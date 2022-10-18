@@ -1,11 +1,11 @@
 const Nav=() => {
     return (
       <nav className="nav">
-      <div>Profile</div>
-      <div>Messages</div>
-      <div>News</div>
-      <div>Music</div>
-      <div>Settins</div>
+      <div><a>Profile</a></div>
+      <div><a>Messages</a></div>
+      <div><a>News</a></div>
+      <div><a>Music</a></div>
+      <div><a>Settins</a></div>
     </nav>
     );
 }
