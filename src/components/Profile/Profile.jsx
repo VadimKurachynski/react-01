@@ -14,8 +14,8 @@ const Profile = () => {
         My post
         <div>New post</div>
       </div>
-      <div className={   `${s.post} ${s.zoloto}`   }>post1</div>
-      <div className={s.post}>post2</div>
+      <div className={`${s.post} ${s.zoloto}`}>post1</div>
+      <div className={`${s.post} ${s.zoloto}`}>post2</div>
 
 
     </div>
