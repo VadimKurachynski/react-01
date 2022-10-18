@@ -1,5 +1,5 @@
 import s from "./Profile.module.css";
-
+console.log(s);
 
 const Profile = () => {
   return (
@@ -14,8 +14,8 @@ const Profile = () => {
         My post
         <div>New post</div>
       </div>
-      <div>post1</div>
-      <div>post2</div>
+      <div className={   `${s.post} ${s.zoloto}`   }>post1</div>
+      <div className={s.post}>post2</div>
 
 
     </div>
