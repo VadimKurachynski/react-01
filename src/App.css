@@ -48,28 +48,3 @@
   /* grid-gap:10px; */
 }
 
-
-
-.header {
-  grid-area: h;
-  background-color: beige;
-}
-
-.header img {
-  width: 100px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: #61dafb;
-}
-
-.content {
-  grid-area: c;
-  background-color: burlywood;
-}
-
-.content img {
-  width: 100%;
-  height: auto;
-}
