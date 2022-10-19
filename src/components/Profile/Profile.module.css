@@ -3,10 +3,10 @@
     background-color: burlywood;
 }
 
-.content img {
+/* .content img {
     width: 100%;
     height: auto;
-}
+} */
 
 .post {
     font-size: 20px;
@@ -14,4 +14,9 @@
 
 .zoloto {
     color: blue;
+}
+
+.cont_img img {
+    width: 1200px;
+    height: 200px;
 }

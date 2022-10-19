@@ -3,10 +3,14 @@
 }
 
 .zoloto {
-    color: rgb(45, 10, 172);
+    color: rgb(134, 231, 22);
+}
+
+.item {
+
+    background-color: blanchedalmond;
 }
 
 .item img {
     width: 30px;
-    height: auto;
 }
