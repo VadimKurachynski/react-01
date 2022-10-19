@@ -1,25 +1,15 @@
-import s from "./Profile.module.css";
+import s from "./MyPosts.module.css";
 console.log(s);
 
-const Profile = () => {
+const MyPosts = () => {
     return (
-        <div className={s.content}>
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOILfvBu6_5wt4RB_1Mz5l4Uenm8yXvW0qiA&usqp=CAU" />
-            </div>
-            <div>
-                ava+description
-            </div>
-            <div>
-                My post
-                <div>New post</div>
-            </div>
+        <div>
+            My post
+            <div>New post</div>
             <div className={`${s.post} ${s.zoloto}`}>post1</div>
             <div className={`${s.post} ${s.zoloto}`}>post2</div>
-
-
         </div>
 
     );
 }
-export default Profile;
+export default MyPosts;
