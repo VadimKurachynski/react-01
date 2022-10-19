@@ -1,17 +1,12 @@
-.content {
-    grid-area: c;
-    background-color: burlywood;
-}
-
-.content img {
-    width: 100%;
-    height: auto;
-}
-
 .post {
     font-size: 20px;
 }
 
 .zoloto {
-    color: blue;
+    color: rgb(45, 10, 172);
+}
+
+.item img {
+    width: 30px;
+    height: auto;
 }

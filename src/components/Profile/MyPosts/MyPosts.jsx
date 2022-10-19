@@ -6,7 +6,10 @@ const MyPosts = () => {
     return (
         <div>
             My post
-            <div>New post</div>
+            <div>
+                <textarea></textarea>
+                <button>Add post</button>
+            </div>
            <Post />
            <Post />
         </div>
