@@ -3,6 +3,7 @@ import Post from "./Post/Post";
 console.log(s);
 
 const MyPosts = () => {
+    
     return (
         <div>
             My post
@@ -10,10 +11,10 @@ const MyPosts = () => {
                 <textarea></textarea>
                 <button>Add post</button>
             </div>
-           <Post />
-           <Post />
-           <Post />
-           <Post />
+            <Post message="Hi, how are you?" />
+            <Post message="it's my first post" />
+            <Post />
+            <Post />
         </div>
 
     );
