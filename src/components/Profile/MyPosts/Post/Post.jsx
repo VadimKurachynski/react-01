@@ -11,4 +11,4 @@ const Post = () => {
 
     );
 }
-export default MyPosts;
+export default Post;

@@ -1,4 +1,5 @@
 import s from "./MyPosts.module.css";
+import Post from "./Post/Post";
 console.log(s);
 
 const MyPosts = () => {
@@ -6,8 +7,8 @@ const MyPosts = () => {
         <div>
             My post
             <div>New post</div>
-            <div className={`${s.post} ${s.zoloto}`}>post1</div>
-            <div className={`${s.post} ${s.zoloto}`}>post2</div>
+           <Post />
+           <Post />
         </div>
 
     );
