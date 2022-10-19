@@ -3,14 +3,17 @@
 }
 
 .zoloto {
-    color: rgb(134, 231, 22);
+    color: rgb(219, 18, 18);
 }
 
 .item {
 
-    background-color: blanchedalmond;
+    background-color: rgb(218, 207, 192);
 }
 
 .item img {
-    width: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
 }
