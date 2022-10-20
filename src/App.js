@@ -12,7 +12,8 @@ function App() {
             <Header/>
             <Nav/>
             <div className="app-wrapper-content">
-                <Dialogs/>
+                {/*<Dialogs/>*/}
+                <Profile />
             </div>
 
             {/*<Profile />*/}
