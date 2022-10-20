@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
 
 
 function App() {
@@ -14,9 +14,10 @@ function App() {
             <Header/>
             <Nav/>
             <div className="app-wrapper-content">
-                <Route component={Dialogs}/>
-                <Route component={Profile}/>
-
+                <Routes>
+                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/dialog" element= {<Dialogs/>}/>
+                </Routes>
             </div>
 
 
