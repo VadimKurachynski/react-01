@@ -12,11 +12,11 @@ function App() {
             <Header/>
             <Nav/>
             <div className="app-wrapper-content">
-                {/*<Dialogs/>*/}
-                <Profile />
+                <Dialogs/>
+                {/*<Profile />*/}
             </div>
 
-            {/*<Profile />*/}
+
 
 
         </div>
