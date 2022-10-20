@@ -6,9 +6,9 @@ const Nav=() => {
       <nav className={s.nav}>
       <div className={s.item}><a href="/profile">Profile</a></div>
       <div className={s.item}><a href="/dialogs">Messages</a></div>
-      <div className={s.item}><a>News</a></div>
-      <div className={s.item}><a>Music</a></div>
-      <div className={s.item}><a>Settins</a></div>
+      <div className={s.item}><a href="/news">News</a></div>
+      <div className={s.item}><a href="/music">Music</a></div>
+      <div className={s.item}><a href="/settins">Settins</a></div>
     </nav>
     );
 }
