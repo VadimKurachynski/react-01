@@ -1,17 +1,17 @@
 .nav {
-  grid-area: n;
-  background-color: #61dafb;
+    grid-area: n;
+    background-color: #61dafb;
 }
 
 .item {
-  color:white;
-  font-size: 20px;
-  text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.active{
-  color:gold;
-  font-size: 20px;
-  text-decoration: none;
+.active {
+    color: gold;
+    font-size: 20px;
+    text-decoration: none;
 }
 

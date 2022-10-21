@@ -1,5 +1,4 @@
 import s from "./Nav.module.css";
-import News from "../News/News";
 import {NavLink} from "react-router-dom";
 
 const setActive = ({ isActive }) =>(isActive ? s.active : s.item);
@@ -11,7 +10,6 @@ const Nav=() => {
       <div><NavLink to="/news" className = {setActive}>News</NavLink></div>
       <div><NavLink to="/music" className = {setActive}>Music</NavLink></div>
       <div><NavLink to="/settins" className = {setActive}>Settins</NavLink></div>
-
     </nav>
     );
 }
