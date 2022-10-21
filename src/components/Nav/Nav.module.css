@@ -3,7 +3,12 @@
   background-color: #61dafb;
 }
 
-.item{
+.item {
   color:white;
   font-size: 20px;
 }
+
+.active{
+  color:gold;
+}
+

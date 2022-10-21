@@ -23,6 +23,7 @@ function App() {
                     <Route path="/news" element= {<News/>}/>
                     <Route path="/music" element= {<Music/>}/>
                     <Route path="/settins" element= {<Settins/>}/>
+
                 </Routes>
             </div>
 
