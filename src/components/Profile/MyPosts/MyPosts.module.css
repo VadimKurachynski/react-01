@@ -1,6 +1,6 @@
 .content {
     grid-area: c;
-    background-color: burlywood;
+    /*background-color: burlywood;*/
 }
 
 .content img {
@@ -10,4 +10,5 @@
 
 .postBlock{
     padding: 20px;
+    background: chartreuse;
 }
