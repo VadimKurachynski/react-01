@@ -5,11 +5,11 @@ console.log(s);
 const MyPosts = () => {
 
     return (
-        <div>
+        <div className={s.postBlock}>
             My post
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+               <div><textarea></textarea></div>
+                <div><button>Add post</button></div>
             </div>
             <Post message="Hi, how are you?" like="5" />
             <Post message="it's my first post" like="6" />

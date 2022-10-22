@@ -10,7 +10,7 @@ const ProfileInfo = () => {
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOILfvBu6_5wt4RB_1Mz5l4Uenm8yXvW0qiA&usqp=CAU"/>
             </div>
 
-            <div>
+            <div class={s.descriptionBlock}>
                 ava+description
             </div>
 
