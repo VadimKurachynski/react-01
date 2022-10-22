@@ -12,9 +12,7 @@ let postsData = [
 
 let postsElements = postsData.map(p => <Post message={p.message} like={p.likesCount}/>)
 
-
 const MyPosts = () => {
-
     return (
         <div className={s.postBlock}>
             <h3>My posts</h3>
