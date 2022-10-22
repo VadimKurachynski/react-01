@@ -3,10 +3,6 @@ import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
-
-
-
-
 let dialogs = [
     {id: 1, name: "Vadim"},
     {id: 2, name: "Dima"},
