@@ -1,25 +1,4 @@
-.content{
-    display: grid;
-    grid-template-columns: 2fr 10fr;
 
-}
-
-.dialogs{
-    background: coral;
-}
-
-.messages{
-    background: chartreuse;
-}
-
-
-
-
-.dialog{
-    font-size: 20px;
-    margin: 50px;
-    color: white;
-}
 
 .message{
     margin: 20px;
