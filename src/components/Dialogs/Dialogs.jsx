@@ -21,6 +21,14 @@ let dialogsData = [
     {id: 3, name: "Marina"},
     {id: 4, name: "Sveta"},
     {id: 5, name: "Nikita"},
+    {id: 5, name: "Karina"},
+]
+
+let messagesData=[
+    {id: 1, massage: `Hi, I am react developer`},
+    {id: 2, massage: `O no, does your friends play soccer?`},
+    {id: 3, massage: `Yes, i can play the gitare`},
+
 ]
 
 const Dialogs = (props) => {
@@ -28,17 +36,19 @@ const Dialogs = (props) => {
         <div className={s.content}>
             <div className={s.dialogs}>
                 <div className={s.dialogsitems}>
-                    <DialogItem name="Vadim" id="1"/>
-                    <DialogItem name="Dima" id="2"/>
-                    <DialogItem name="Marina" id="3"/>
-                    <DialogItem name="Sveta" id="4"/>
-                    <DialogItem name="Nikita" id="5"/>
+                    <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
+                    <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>
+                    <DialogItem name={dialogsData[2].name} id={dialogsData[2].id}/>
+                    <DialogItem name={dialogsData[3].name} id={dialogsData[3].id}/>
+                    <DialogItem name={dialogsData[4].name} id={dialogsData[4].id}/>
+                    <DialogItem name={dialogsData[5].name} id={dialogsData[5].id}/>
                 </div>
             </div>
             <div className={s.messages}>
-                < Message message={`Hi, I am react developer`}/>
-                < Message message={`O no, does your friends play soccer?`}/>
-                < Message message={`Yes, i can play the gitare`}/>
+                <Message message={messagesData[0].massage} id={messagesData[0].id}/>
+                <Message message={messagesData[1].massage} id={messagesData[1].id}/>
+                <Message message={messagesData[2].massage} id={messagesData[2].id}/>
+
             </div>
         </div>
     );
