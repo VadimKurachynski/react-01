@@ -25,10 +25,9 @@ let dialogsData = [
 ]
 
 let messagesData=[
-    {id: 1, massage: `Hi, I am react developer`},
-    {id: 2, massage: `O no, does your friends play soccer?`},
-    {id: 3, massage: `Yes, i can play the gitare`},
-
+    {id: 1, message: `Hi, I am react developer`},
+    {id: 2, message: `O no, does your friends play soccer?`},
+    {id: 3, message: `Yes, i can play the gitare`},
 ]
 
 const Dialogs = (props) => {
@@ -45,9 +44,9 @@ const Dialogs = (props) => {
                 </div>
             </div>
             <div className={s.messages}>
-                <Message message={messagesData[0].massage} id={messagesData[0].id}/>
-                <Message message={messagesData[1].massage} id={messagesData[1].id}/>
-                <Message message={messagesData[2].massage} id={messagesData[2].id}/>
+                <Message message={messagesData[0].message} id={messagesData[0].id}/>
+                <Message message={messagesData[1].message} id={messagesData[1].id}/>
+                <Message message={messagesData[2].message} id={messagesData[2].id}/>
 
             </div>
         </div>
