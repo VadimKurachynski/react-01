@@ -8,10 +8,15 @@ import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settins from "./components/Settins/Settins";
+import DialogItem from "./components/Dialogs/DialogItem/DialogItem";
+import Message from "./components/Dialogs/Message/Message";
 
 
-function App() {
+
+function App(props) {
+
     return (
+
         <BrowserRouter>
         <div className="app-wrapper">
             <Header/>
@@ -19,7 +24,7 @@ function App() {
             <div className="app-wrapper-content">
                 <Routes>
                     <Route path="/profile" element={<Profile/>}/>
-                    <Route path="/dialogs*" element= {<Dialogs/>}/>
+                    <Route path="/dialogs*" element= {<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
                     <Route path="/news" element= {<News/>}/>
                     <Route path="/music" element= {<Music/>}/>
                     <Route path="/settins" element= {<Settins/>}/>
