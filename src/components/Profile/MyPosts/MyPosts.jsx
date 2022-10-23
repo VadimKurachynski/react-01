@@ -3,9 +3,9 @@ import Post from "./Post/Post";
 
 
 const MyPosts = (props) => {
-    let postsElements = props.postsData.map(p => <Post message={p.message} like={p.likesCount}/>)
+    let postsElements = props.postsData.map(p => <Post message={p.message} like={p.likesCount} id={p.id}/>)
     return (
-        <div className={s.postBlock} >
+        <div  className={s.postBlock} >
             <h3>My posts</h3>
             <div>
                 <div><textarea></textarea></div>
