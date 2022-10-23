@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DialogItem from "./components/Dialogs/DialogItem/DialogItem";
-import Message from "./components/Dialogs/Message/Message";
+
 
 let dialogs = [
     {id: 1, name: "Vadim"},
@@ -20,6 +19,11 @@ let messages = [
     {id: 3, message: `Yes, i can play the gitare`},
 ]
 
+let postsData = [
+    {id: 1, message: `Hi, I am react developer`, likesCount: 12},
+    {id: 2, message: "Hi, how are you?", likesCount: 10},
+    {id: 3, message: "it's my first post", likesCount: 21},
+]
 
 
 
@@ -28,7 +32,7 @@ let messages = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App dialogs={dialogs} messages={messages}/>
+    <App dialogs={dialogs} messages={messages} postsData={postsData}/>
   </React.StrictMode>
 );
 

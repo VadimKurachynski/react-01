@@ -1,5 +1,5 @@
 import s from "./Post.module.css";
-console.log(s);
+
 
 
 const Post = (props) => {
