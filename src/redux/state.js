@@ -27,7 +27,13 @@ let state = {
 
 
 let addPost=(postMessage)=>{
-    state.profilePage.posts.push();
+
+    let addPost={
+       id: 7,
+       message: "Hello!",
+        likesCount: 0
+    };
+    state.profilePage.posts.push(addPost);
 }
 
 
