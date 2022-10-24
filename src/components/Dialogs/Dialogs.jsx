@@ -5,11 +5,16 @@ import Message from "./Message/Message";
 import React from "react";
 
 
+
+
 const Dialogs = (props) => {
-    let dialogsElements = props.state.dialogs.map((d) => <DialogItem name={d.name} id={d.id}  />);
-    let messagesElements = props.state.messages.map((m) => <Message message={m.message} id={m.id} />);
+    let dialogsElements = props.state.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
+    let messagesElements = props.state.messages.map((m) => <Message message={m.message} id={m.id}/>);
 
 
+   let addMessage=()=>{
+       console.log("nfr");
+   }
     return (
         <div className={s.content}>
             <div className={s.dialogs}>
@@ -23,13 +28,14 @@ const Dialogs = (props) => {
             </div>
 
             <div>
-            <div>
-                <textarea></textarea>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button onClick={addMessage}>add</button>
+                </div>
+
             </div>
-
-
-
-        </div>
 
         </div>
     );
