@@ -25,4 +25,10 @@ let state = {
 
 }
 
+
+let addPost=(postMessage)=>{
+    state.profilePage.posts.push();
+}
+
+
 export default state;
