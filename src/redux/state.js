@@ -30,7 +30,7 @@ export let addPost=(postMessage)=>{
 
     let newPost={
        id: 7,
-       message: "Hello!",
+       message: postMessage,
         likesCount: 0
     };
     state.profilePage.posts.push(newPost);
