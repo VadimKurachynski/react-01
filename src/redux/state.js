@@ -26,14 +26,14 @@ let state = {
 }
 
 
-let addPost=(postMessage)=>{
+export let addPost=(postMessage)=>{
 
-    let addPost={
+    let newPost={
        id: 7,
        message: "Hello!",
         likesCount: 0
     };
-    state.profilePage.posts.push(addPost);
+    state.profilePage.posts.push(newPost);
 }
 
 
