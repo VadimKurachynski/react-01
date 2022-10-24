@@ -17,7 +17,6 @@ function App(props) {
 
     return (
 
-        <BrowserRouter>
         <div className="app-wrapper">
             <Header/>
             <Nav/>
@@ -30,13 +29,10 @@ function App(props) {
                     <Route path="/news" element= {<News/>}/>
                     <Route path="/music" element= {<Music/>}/>
                     <Route path="/settins" element= {<Settins/>}/>
-
                 </Routes>
             </div>
-
-
         </div>
-        </BrowserRouter>
+
     );
 }
 
