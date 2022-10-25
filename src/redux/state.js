@@ -29,16 +29,21 @@ let state = {
 }
 
 
-export let addPost=(postMessage)=>{
-
+export let addPost=()=>{
     let newPost={
        id: 7,
-       message: postMessage,
+       message: state.profilePage.newPostText,
         likesCount: 0
     };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText="";
      rescan(state);
 }
 
+
+ export let updateNewPostText=(newText)=>{
+     state.profilePage.newPostText=newText;
+     rescan(state);
+ }
 
 export default state;
