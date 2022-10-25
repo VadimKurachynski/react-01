@@ -13,6 +13,7 @@ const MyPosts = (props) => {
         props.addPost(text);
          newPostElement.current.value="";
     }
+
     return (
         <div  className={s.postBlock} >
             <h3>My posts</h3>
