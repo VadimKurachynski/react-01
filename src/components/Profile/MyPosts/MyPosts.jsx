@@ -9,16 +9,19 @@ const MyPosts = (props) => {
     let newPostElement=createRef();
 
     let addPost=()=>{
+
         let text=newPostElement.current.value;
         props.addPost(text);
          newPostElement.current.value="";
+
     }
 
     return (
         <div  className={s.postBlock} >
             <h3>My posts</h3>
             <div>
-                <div><textarea ref={newPostElement}></textarea></div>
+                {/*<div><textarea ref={newPostElement}></textarea></div>*/}
+                <div><textarea ref={newPostElement} onChange={addPost}></textarea></div>
                 <div>
                     <button onClick={addPost}>Add post</button>
                 </div>

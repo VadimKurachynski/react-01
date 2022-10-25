@@ -8,9 +8,9 @@ import {BrowserRouter} from "react-router-dom";
 import{addPost} from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 export const rescan=()=>{
-
-
     root.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -20,7 +20,6 @@ export const rescan=()=>{
             </BrowserRouter>
         </React.StrictMode>
     );
-
 }
 rescan();
 
