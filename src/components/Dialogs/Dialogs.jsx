@@ -3,12 +3,20 @@ import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React, {createRef} from "react";
+import {addPostMessages} from "../../redux/state";
 
 
 let addMessage=()=> {
-    console.log(reft.current.value);
-    reft.current.value = "";
+   let text=reft.current.value;
+    addPostMessages(text);
+    reft.current.value="";
 }
+
+let onChangeTr=()=> {
+    let text=reft.current.value;
+    console.log(text);
+}
+
 
 let reft=createRef();
 const Dialogs = (props) => {
@@ -31,7 +39,8 @@ const Dialogs = (props) => {
 
             <div>
                 <div>
-                    <textarea ref={reft}></textarea>
+                    <textarea onChange={onChangeTr} ref={reft} value={props.textMessage}></textarea>
+
                 </div>
                 <div>
                     <button onClick={addMessage}>add</button>

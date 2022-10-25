@@ -23,6 +23,7 @@ let state = {
             {id: 2, message: `O no, does your friends play soccer?`},
             {id: 3, message: `Yes, i can play the gitare!`},
         ],
+        textMessage:"it-vadim2"
     }
 
 
@@ -40,10 +41,21 @@ export let addPost=()=>{
      rescan(state);
 }
 
-
  export let updateNewPostText=(newText)=>{
      state.profilePage.newPostText=newText;
      rescan(state);
  }
+
+//Message------------------------------------
+ export let addPostMessages=(text)=>{
+     let newPost={
+         id: 7,
+         message:text,
+     };
+     state.dialogsPage.messages.push(newPost);
+     rescan(state);
+ }
+
+
 
 export default state;
