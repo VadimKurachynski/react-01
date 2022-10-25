@@ -10,7 +10,7 @@ import Music from "./components/Music/Music";
 import Settins from "./components/Settins/Settins";
 import DialogItem from "./components/Dialogs/DialogItem/DialogItem";
 import Message from "./components/Dialogs/Message/Message";
-import {addPostMessages} from "./redux/state";
+import {addPostMessages, updatetextMessage} from "./redux/state";
 
 
 
@@ -32,6 +32,7 @@ function App(props) {
                            element = {<Dialogs state={props.state.dialogsPage}
                                                addPostMessages={addPostMessages}
                                                textMessage={props.state.dialogsPage.textMessage}
+                                               updatetextMessage={updatetextMessage}
                            />}/>
                     <Route path="/news" element= {<News/>}/>
                     <Route path="/music" element= {<Music/>}/>

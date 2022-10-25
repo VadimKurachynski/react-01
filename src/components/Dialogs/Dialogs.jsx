@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React, {createRef} from "react";
-import {addPostMessages} from "../../redux/state";
+import {addPostMessages, updatetextMessage} from "../../redux/state";
 
 
 let addMessage=()=> {
@@ -14,7 +14,9 @@ let addMessage=()=> {
 
 let onChangeTr=()=> {
     let text=reft.current.value;
-    console.log(text);
+    console.log("отправка "+text);
+    updatetextMessage(text);
+
 }
 
 
