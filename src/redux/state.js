@@ -29,8 +29,6 @@ let state = {
         ],
         textMessage:"vadim"
     }
-
-
 }
 
 
@@ -67,5 +65,8 @@ export let addPost=()=>{
      rescan(state);
  }
 
+ export const subscribe=(observer)=>{
+
+}
 
 export default state;
