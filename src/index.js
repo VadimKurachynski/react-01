@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 import state, {subscribe} from "./redux/state";
 import ReactDOM from 'react-dom/client';
 import './index.css';

@@ -1,8 +1,6 @@
 
 
-let rescan =()=>{
-    console.log("state")
-}
+
 
 let state = {
     profilePage: {
@@ -30,7 +28,9 @@ let state = {
         textMessage:"vadim"
     }
 }
-
+let rescan =()=>{
+    console.log("state")
+}
 
 export let addPost=()=>{
     let newPost={
@@ -66,7 +66,7 @@ export let addPost=()=>{
  }
 
  export const subscribe=(observer)=>{
-
+rescan=observer;
 }
 
 export default state;
