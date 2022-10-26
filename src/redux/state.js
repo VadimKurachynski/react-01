@@ -40,7 +40,6 @@ export let addPost=()=>{
     state.profilePage.newPostText="";
      rescan(state);
 }
-
  export let updateNewPostText=(newText)=>{
      state.profilePage.newPostText=newText;
 
@@ -55,11 +54,12 @@ export let addPost=()=>{
          message:text,
      };
      state.dialogsPage.messages.push(newPost);
+     state.dialogsPage.textMessage="";
      rescan(state);
  }
  export let updatetextMessage=(text)=>{
      state.dialogsPage.textMessage=text;
-     console.log("записано "+state.dialogsPage.textMessage)
+
      rescan(state);
  }
 

@@ -14,7 +14,7 @@ let addMessage=()=> {
 
 let onChangeTr=()=> {
     let text=reft.current.value;
-    console.log("отправка "+text);
+
     updatetextMessage(text);
 
 }
