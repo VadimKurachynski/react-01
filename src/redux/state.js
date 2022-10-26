@@ -1,4 +1,8 @@
- import {rescan} from "../index";
+
+
+let rescan =()=>{
+    console.log("state")
+}
 
 let state = {
     profilePage: {
