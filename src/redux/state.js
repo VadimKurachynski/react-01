@@ -28,11 +28,9 @@ let state = {
         textMessage:"vadim"
     }
 }
-let rescan =()=>{
-    console.log("state")
-}
 
-export let addPost=()=>{
+
+ export let addPost=()=>{
     let newPost={
        id: 7,
        message: state.profilePage.newPostText,
@@ -59,14 +57,20 @@ export let addPost=()=>{
      state.dialogsPage.textMessage="";
      rescan(state);
  }
+
  export let updatetextMessage=(text)=>{
      state.dialogsPage.textMessage=text;
-
      rescan(state);
  }
 
+
+
+let rescan =()=>{
+
+}
  export const subscribe=(observer)=>{
 rescan=observer;
 }
+
 
 export default state;

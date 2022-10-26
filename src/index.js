@@ -11,7 +11,7 @@ import {addPost, addPostMessages, updateNewPostText, updatetextMessage} from "./
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const rescan=()=>{
+const rescan=(state)=>{
     root.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -24,8 +24,9 @@ const rescan=()=>{
         </React.StrictMode>
     );
 }
- rescan();
+  rescan(state);
 subscribe(rescan);
+
 
 
 // If you want to start measuring performance in your app, pass a function
