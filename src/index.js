@@ -1,4 +1,5 @@
 import React from 'react';
+
 import state, {subscribe} from "./redux/state";
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -10,7 +11,7 @@ import {addPost, addPostMessages, updateNewPostText, updatetextMessage} from "./
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const rescan=(state)=>{
+const rescan=()=>{
     root.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -23,7 +24,7 @@ const rescan=(state)=>{
         </React.StrictMode>
     );
 }
- rescan(state);
+ rescan();
 subscribe(rescan);
 
 
