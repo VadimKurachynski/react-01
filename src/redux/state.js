@@ -1,4 +1,4 @@
- import {rescan} from "../render";
+ import {rescan} from "../index";
 
 let state = {
     profilePage: {
