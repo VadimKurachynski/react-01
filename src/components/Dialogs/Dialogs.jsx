@@ -3,28 +3,32 @@ import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React, {createRef} from "react";
-import {addPostMessages, updatetextMessage} from "../../redux/state";
+// import {addPostMessages, updatetextMessage} from "../../redux/state";
 
 
-let addMessage=()=> {
-   let text=reft.current.value;
-    addPostMessages(text);
-    reft.current.value="";
-}
-
-let onChangeTr=()=> {
-    let text=reft.current.value;
-
-    updatetextMessage(text);
-
-}
 
 
-let reft=createRef();
+
 const Dialogs = (props) => {
-    let dialogsElements = props.state.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
-    let messagesElements = props.state.messages.map((m) => <Message message={m.message} id={m.id}/>);
 
+    let addMessage=()=> {
+        let text=reft.current.value;
+        props.props.addPostMessages(text);
+        reft.current.value="";
+    }
+
+    let onChangeTr=()=> {
+        // let text=reft.current.value;
+        // props.props.updatetextMessage(text);
+
+    }
+
+
+
+
+    let reft=createRef();
+     let dialogsElements = props.props._state.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
+     let messagesElements = props.props._state.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id}/>);
 
 
     return (
@@ -41,7 +45,7 @@ const Dialogs = (props) => {
 
             <div>
                 <div>
-                    <textarea onChange={onChangeTr} ref={reft} value={props.textMessage}></textarea>
+                    <textarea onChange={onChangeTr} ref={reft} value={props.props._state.textMessage}></textarea>
 
                 </div>
                 <div>
@@ -52,6 +56,15 @@ const Dialogs = (props) => {
 
         </div>
     );
+
+
+
+
+
+
+
+
+
 
 }
 
