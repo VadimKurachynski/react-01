@@ -1,4 +1,3 @@
-
 // let state = {
 //     profilePage: {
 //         posts: [
@@ -65,7 +64,7 @@
 // }
 
 
-let store={
+let store = {
     _state: {
         profilePage: {
             posts: [
@@ -73,7 +72,7 @@ let store={
                 {id: 2, message: "Hi, how are you?", likesCount: 10},
                 {id: 3, message: "it's my first post", likesCount: 21},
             ],
-            newPostText:"it-vadim"
+            newPostText: "it-vadim"
         },
         dialogsPage: {
             dialogs: [
@@ -89,42 +88,58 @@ let store={
                 {id: 2, message: `O no, does your friends play soccer?`},
                 {id: 3, message: `Yes, i can play the gitare!`},
             ],
-            textMessage:"vadim"
+            textMessage: "vadim"
         }
     },
-    _rescan(){
+    _rescan() {
         console.log("no");
     },
-    getState(){
+    getState() {
         return this._state;
     },
-    subscribe(observer){
-        this._rescan=observer;
+    subscribe(observer) {
+        this._rescan = observer;
     },
-    addPost(){
+    addPost() {
 
-        let newPost={
+        let newPost = {
             id: 7,
             message: this._state.profilePage.newPostText,
             likesCount: 7
         };
-       this._state.profilePage.posts.push(newPost);
-       this._state.profilePage.newPostText="";
-       this._rescan(this._state);
+        this._state.profilePage.posts.push(newPost);
+        this._state.profilePage.newPostText = "";
+        this._rescan(this._state);
 
     },
-    updateNewPostText(newText){
-        this._state.profilePage.newPostText=newText;
+    updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText;
         this._rescan(this._state);
     },
-    dispatch(action){
 
+
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+
+            let newPost = {
+                id: 7,
+                message: this._state.profilePage.newPostText,
+                likesCount: 7
+            };
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = "";
+            this._rescan(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this._rescan(this._state);
+        }
     },
 
-    addPostMessages(text){
-        let newPost={
+
+    addPostMessages(text) {
+        let newPost = {
             id: 7,
-            message:text,
+            message: text,
         };
         this._state.dialogsPage.messages.push(newPost);
         // this._state.dialogsPage.textMessage="";
@@ -132,8 +147,8 @@ let store={
         this._rescan(this._state);
 
     },
-    updateTextMessage(text){
-        this._state.dialogsPage.textMessage=text;
+    updateTextMessage(text) {
+        this._state.dialogsPage.textMessage = text;
         this._rescan(this._state);
     },
 
@@ -141,5 +156,5 @@ let store={
 }
 
 
-window.store=store;
- export default store;
+window.store = store;
+export default store;

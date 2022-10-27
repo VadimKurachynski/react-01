@@ -9,16 +9,17 @@ const MyPosts = (props) => {
 
     let newPostElement = createRef();
 
-    let addPost = () => {
 
+    let addPost = () => {
         //let text = newPostElement.current.value;
-        props.addPost();
+        props.dispatch({type:'ADD-POST'});
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        props.dispatch({type:'UPDATE-NEW-POST-TEXT',newText:text});
     }
+
 
     return (
         <div className={s.postBlock}>

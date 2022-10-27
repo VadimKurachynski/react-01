@@ -17,9 +17,11 @@ let rescan=(state)=>{
         <React.StrictMode>
             <BrowserRouter>
                 <App
-                    state={store.getState()}
-                    addPost={store.addPost.bind(store)}
-                    updateNewPostText={store.updateNewPostText.bind(store)}
+                    state={state}
+                   // state={store.getState()}
+                    dispatch={store.dispatch.bind(store)}
+                    // addPost={store.addPost.bind(store)}
+                    // updateNewPostText={store.updateNewPostText.bind(store)}
                     addPostMessages={store.addPostMessages.bind(store)}
                     updateTextMessage={store.updateTextMessage.bind(store)}
                 />
