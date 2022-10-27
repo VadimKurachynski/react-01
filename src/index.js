@@ -10,18 +10,18 @@ import store from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let rescan=()=>{
+
+let rescan=(state)=>{
+
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-
                 <App
                     state={store.getState()}
                     addPost={store.addPost.bind(store)}
                     updateNewPostText={store.updateNewPostText.bind(store)}
                     addPostMessages={store.addPostMessages.bind(store)}
                     updateTextMessage={store.updateTextMessage.bind(store)}
-
                 />
             </BrowserRouter>
         </React.StrictMode>
@@ -29,8 +29,8 @@ let rescan=()=>{
 
 }
 
-// rescan(store.getState());
-rescan();
+ rescan(store.getState());
+
 
 store.subscribe(rescan);
 
