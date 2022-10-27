@@ -92,16 +92,14 @@ let store={
             textMessage:"vadim"
         }
     },
-
-    getState(){
-        return this._state;
-    },
-
     _rescan(){
         console.log("no");
     },
 
-   addPost(){
+    getState(){
+        return this._state;
+    },
+    addPost(){
 
         let newPost={
             id: 7,
@@ -113,16 +111,13 @@ let store={
        this._rescan(this._state);
 
     },
-
     updateNewPostText(newText){
         this._state.profilePage.newPostText=newText;
         this._rescan(this._state);
     },
-
     subscribe(observer){
         this._rescan=observer;
     },
-
     addPostMessages(text){
         let newPost={
             id: 7,
@@ -134,7 +129,6 @@ let store={
         this._rescan(this._state);
 
     },
-
     updateTextMessage(text){
         this._state.dialogsPage.textMessage=text;
         this._rescan(this._state);
