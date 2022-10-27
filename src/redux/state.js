@@ -134,7 +134,7 @@ let store={
         };
         this._state.dialogsPage.messages.push(newPost);
         // this._state.dialogsPage.textMessage="";
-        console.log(this._state.dialogsPage.messages);
+
         this._rescan(this._state);
 
     },

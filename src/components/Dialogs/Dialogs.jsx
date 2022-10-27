@@ -45,7 +45,7 @@ const Dialogs = (props) => {
 
             <div>
                 <div>
-                    <textarea onChange={onChangeTr} ref={reft} value={props.props._state.textMessage}></textarea>
+                    <textarea onChange={onChangeTr} ref={reft} value={props.textMessage}></textarea>
 
                 </div>
                 <div>

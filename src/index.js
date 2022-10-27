@@ -29,7 +29,8 @@ let rescan=()=>{
 
 }
 
-rescan(store.getState());
+// rescan(store.getState());
+rescan();
 
 store.subscribe(rescan);
 
