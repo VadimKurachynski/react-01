@@ -95,9 +95,11 @@ let store={
     _rescan(){
         console.log("no");
     },
-
     getState(){
         return this._state;
+    },
+    subscribe(observer){
+        this._rescan=observer;
     },
     addPost(){
 
@@ -115,9 +117,10 @@ let store={
         this._state.profilePage.newPostText=newText;
         this._rescan(this._state);
     },
-    subscribe(observer){
-        this._rescan=observer;
+    dispatch(action){
+
     },
+
     addPostMessages(text){
         let newPost={
             id: 7,
