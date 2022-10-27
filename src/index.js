@@ -1,5 +1,4 @@
 import React from 'react';
-
 import state, {subscribe} from "./redux/state";
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -25,7 +24,9 @@ const rescan=(state)=>{
     );
 }
   rescan(state);
+
 subscribe(rescan);
+
 
 
 

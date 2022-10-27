@@ -1,7 +1,4 @@
 
-
-
-
 let state = {
     profilePage: {
         posts: [
@@ -42,9 +39,7 @@ let state = {
 }
  export let updateNewPostText=(newText)=>{
      state.profilePage.newPostText=newText;
-
      rescan(state);
-
  }
 
 //Message------------------------------------
@@ -63,11 +58,8 @@ let state = {
      rescan(state);
  }
 
+let rescan =()=>{}
 
-
-let rescan =()=>{
-
-}
  export const subscribe=(observer)=>{
 rescan=observer;
 }
