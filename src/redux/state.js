@@ -95,7 +95,6 @@ let store={
 
     getState(){
         return this._state;
-
     },
 
     _rescan(){
@@ -120,12 +119,9 @@ let store={
         this._rescan(this._state);
     },
 
-
     subscribe(observer){
         this._rescan=observer;
     },
-
-
 
     addPostMessages(text){
         let newPost={
@@ -146,8 +142,6 @@ let store={
 
 
 }
-
-
 
 
 window.store=store;
