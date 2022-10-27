@@ -100,22 +100,7 @@ let store = {
     subscribe(observer) {
         this._rescan = observer;
     },
-    addPost() {
 
-        let newPost = {
-            id: 7,
-            message: this._state.profilePage.newPostText,
-            likesCount: 7
-        };
-        this._state.profilePage.posts.push(newPost);
-        this._state.profilePage.newPostText = "";
-        this._rescan(this._state);
-
-    },
-    updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this._rescan(this._state);
-    },
 
 
     dispatch(action) {
