@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React, {createRef} from "react";
-// import {addPostMessages, updatetextMessage} from "../../redux/state";
+
 
 
 
@@ -13,13 +13,13 @@ const Dialogs = (props) => {
 
     let addMessage=()=> {
         let text=reft.current.value;
-        props.props.addPostMessages(text);
+       props.addPostMessages(text);
         reft.current.value="";
     }
 
     let onChangeTr=()=> {
-        // let text=reft.current.value;
-        // props.props.updatetextMessage(text);
+        let text=reft.current.value;
+        props.updateTextMessage(text);
 
     }
 
@@ -27,8 +27,8 @@ const Dialogs = (props) => {
 
 
     let reft=createRef();
-     let dialogsElements = props.props._state.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
-     let messagesElements = props.props._state.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id}/>);
+     let dialogsElements = props.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
+     let messagesElements = props.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id}/>);
 
 
     return (

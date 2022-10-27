@@ -93,21 +93,26 @@ let store={
         }
     },
 
+    getState(){
+        return this._state;
+
+    },
+
     _rescan(){
         console.log("no");
     },
 
-
-
    addPost(){
+
         let newPost={
             id: 7,
             message: this._state.profilePage.newPostText,
-            likesCount: 0
+            likesCount: 7
         };
        this._state.profilePage.posts.push(newPost);
        this._state.profilePage.newPostText="";
        this._rescan(this._state);
+
     },
 
     updateNewPostText(newText){
@@ -115,6 +120,10 @@ let store={
         this._rescan(this._state);
     },
 
+
+    subscribe(observer){
+        this._rescan=observer;
+    },
 
 
 
@@ -130,23 +139,16 @@ let store={
 
     },
 
-
-
-
-    updatetextMessage(text){
+    updateTextMessage(text){
         this._state.dialogsPage.textMessage=text;
         this._rescan(this._state);
     },
 
 
-
-    subscribe(observer){
-        this._rescan=observer;
-    }
-
 }
 
 
-window.store=store;
 
+
+window.store=store;
  export default store;

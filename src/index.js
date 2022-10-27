@@ -1,37 +1,35 @@
 import React from 'react';
-
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-
 import store from "./redux/state";
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const rescan=(store)=>{
+let rescan=()=>{
     root.render(
         <React.StrictMode>
             <BrowserRouter>
 
                 <App
-                    props={store}
+                    state={store.getState()}
+                    addPost={store.addPost.bind(store)}
+                    updateNewPostText={store.updateNewPostText.bind(store)}
+                    addPostMessages={store.addPostMessages.bind(store)}
+                    updateTextMessage={store.updateTextMessage.bind(store)}
 
-                    // state={state}
-                    //  addPost={addPost}
-                    //  updateNewPostText={updateNewPostText}
-                    //  addPostMessages={addPostMessages}
-                    //  updatetextMessage={updatetextMessage}
                 />
             </BrowserRouter>
         </React.StrictMode>
     );
+
 }
 
-rescan(store);
+rescan(store.getState());
 
 store.subscribe(rescan);
 

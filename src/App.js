@@ -16,6 +16,7 @@ import Settins from "./components/Settins/Settins";
 
 function App(props) {
 
+
     return (
 
         <div className="app-wrapper">
@@ -25,20 +26,20 @@ function App(props) {
                 <Routes>
                     <Route path="/profile"
                            element={<Profile
-                               // profilePage={props.state.profilePage}
-                               //               addPost={props.addPost}
-                               //               updateNewPostText={props.updateNewPostText}
-                                props={props.props}
+                                profilePage={props.state.profilePage}
+                                             addPost={props.addPost}
+                                            updateNewPostText={props.updateNewPostText}
+
 
 
                            />}/>
                     <Route path="/dialogs/*"
                            element = {<Dialogs
-                                            // state={props.state.dialogsPage}
-                                            //    addPostMessages={addPostMessages}
-                                            //    textMessage={props.state.dialogsPage.textMessage}
-                                            //    updatetextMessage={updatetextMessage}
-                               props={props.props}
+                               dialogsPage={props.state.dialogsPage}
+                                                addPostMessages={props.addPostMessages}
+                                                textMessage={props.textMessage}
+                                                 updateTextMessage={props.updateTextMessage}
+
                            />}/>
 
                     <Route path="/news" element= {<News/>}/>
