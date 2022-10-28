@@ -22,8 +22,8 @@ let rescan=(state)=>{
                     dispatch={store.dispatch.bind(store)}
                     // addPost={store.addPost.bind(store)}
                     // updateNewPostText={store.updateNewPostText.bind(store)}
-                    addPostMessages={store.addPostMessages.bind(store)}
-                    updateTextMessage={store.updateTextMessage.bind(store)}
+                    // addPostMessages={store.addPostMessages.bind(store)}
+                    // updateTextMessage={store.updateTextMessage.bind(store)}
                 />
             </BrowserRouter>
         </React.StrictMode>
