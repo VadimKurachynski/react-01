@@ -1,5 +1,4 @@
 import s from "./Dialogs.module.css";
-import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React, {createRef} from "react";
@@ -38,7 +37,7 @@ const Dialogs = (props) => {
 
             <div>
                 <div>
-                    <textarea onChange={onChangeTr} ref={reft} value={props.textMessage}></textarea>
+                    <textarea onChange={onChangeTr} ref={reft} value={props.dialogsPage.textMessage}></textarea>
 
                 </div>
 
