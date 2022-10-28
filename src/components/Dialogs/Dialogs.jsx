@@ -11,14 +11,14 @@ const Dialogs = (props) => {
         props.dispatch(addMessageActionCreator());
     }
 
-    let onChangeTr = () => {
-        let text = reft.current.value;
+    let onChangeTr = (e) => {
+        let text=e.target.value;
+
         props.dispatch(updateNewMessageTextActionCreator(text));
 
     }
 
 
-    let reft = createRef();
     let dialogsElements = props.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
     let messagesElements = props.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id}/>);
 
@@ -37,7 +37,7 @@ const Dialogs = (props) => {
 
             <div>
                 <div>
-                    <textarea onChange={onChangeTr} ref={reft} value={props.dialogsPage.textMessage}></textarea>
+                    <textarea onChange={onChangeTr}  value={props.dialogsPage.textMessage}></textarea>
 
                 </div>
 
