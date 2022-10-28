@@ -1,4 +1,4 @@
-const profileReducer=(state,action)=>{
+const dialogsReducer=(state,action)=>{
     
     return state;
 }
