@@ -10,9 +10,7 @@ import store from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
 let rescan=(state)=>{
-
     root.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -23,12 +21,9 @@ let rescan=(state)=>{
             </BrowserRouter>
         </React.StrictMode>
     );
-
 }
 
  rescan(store.getState());
-
-
 store.subscribe(rescan);
 
 
