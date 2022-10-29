@@ -11,7 +11,7 @@ import store from "./redux/redux-store";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 let rescan=(state)=>{
-
+debugger;
     root.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -26,8 +26,6 @@ let rescan=(state)=>{
 
  rescan(store.getState());
 
-
-// store.subscribe(rescan);
 
 store.subscribe(()=>{
     let state=store.getState();

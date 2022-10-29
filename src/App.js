@@ -16,9 +16,7 @@ import Settins from "./components/Settins/Settins";
 
 function App(props) {
 
-
     return (
-
         <div className="app-wrapper">
             <Header/>
             <Nav/>
