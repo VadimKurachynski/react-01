@@ -13,7 +13,6 @@ const Dialogs = (props) => {
 
     let onChangeTr = (e) => {
         let text=e.target.value;
-
         props.dispatch(updateNewMessageTextActionCreator(text));
 
     }

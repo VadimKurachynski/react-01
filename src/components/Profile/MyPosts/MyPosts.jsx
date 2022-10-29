@@ -14,10 +14,9 @@ const MyPosts = (props) => {
         props.dispatch(addPostActionCreator());
     }
 
-    let onPostChange = () => {
-        let text = newPostElement.current.value;
-        let action=updateNewPostTextActionCreator(text);
-        props.dispatch(action);
+    let onPostChange = (e) => {
+        let text=e.target.value;
+        props.dispatch(updateNewPostTextActionCreator(text));
     }
 
 
@@ -25,9 +24,7 @@ const MyPosts = (props) => {
         <div className={s.postBlock}>
             <h3>My posts</h3>
             <div>
-
-                <div><textarea onChange={onPostChange} ref={newPostElement}
-                               value={props.newPostText}/></div>
+                <div><textarea onChange={onPostChange}value={props.newPostText}/></div>
                 <div>
                     <button onClick={addPost}>Add post</button>
                 </div>
