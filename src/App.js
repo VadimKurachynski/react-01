@@ -8,10 +8,7 @@ import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settins from "./components/Settins/Settins";
-// import DialogItem from "./components/Dialogs/DialogItem/DialogItem";
-// import Message from "./components/Dialogs/Message/Message";
-// import {addPostMessages, updatetextMessage} from "./redux/state";
-// import store from "./redux/state";
+
 
 
 function App(props) {
