@@ -10,7 +10,6 @@ import Music from "./components/Music/Music";
 import Settins from "./components/Settins/Settins";
 
 
-
 function App(props) {
 
     return (
@@ -23,8 +22,6 @@ function App(props) {
                            element={<Profile
                                 profilePage={props.state.profilePage}
                                 dispatch={props.dispatch}
-
-
 
                            />}/>
                     <Route path="/dialogs/*"
