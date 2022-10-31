@@ -5,14 +5,15 @@ import Dialogs from "./Dialogs";
 
 
 const DialogsContainer = (props) => {
-    debugger;
+
     let state=props.store.getState();
+
     let addMessage = () => {
         props.store.dispatch(addMessageActionCreator());
     }
 
-    let onChangeTr = (e) => {
-        let text=e.target.value;
+    let onChangeTr = (text) => {
+
         props.store.dispatch(updateNewMessageTextActionCreator(text));
 
     }
@@ -25,9 +26,9 @@ const DialogsContainer = (props) => {
         <Dialogs
             addMessage={addMessage}
             onChangeTr={onChangeTr}
-            messages={state.messages}
-            dialogs={state.dialogs}
-            textMessage={state.textMessage}
+            messages={state.dialogsPage.messages}
+            dialogs={state.dialogsPage.dialogs}
+            textMessage={state.dialogsPage.textMessage}
 
         />
 
