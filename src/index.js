@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import store from "./redux/redux-store";
+import {Provider} from "react-redux";
 
 
 
@@ -15,11 +16,12 @@ let rescan=(state)=>{
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App
-                    store={store}
+                <Provider store={store}>
+                <App />
+                   // store={store}
                     // state={state}
                     // dispatch={store.dispatch.bind(store)}
-                />
+            </Provider>
             </BrowserRouter>
         </React.StrictMode>
     );
