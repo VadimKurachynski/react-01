@@ -7,8 +7,6 @@ const MyPosts = (props) => {
     let postsElements =
         props.posts.map(p => <Post message={p.message} like={p.likesCount} id={p.id}/>)
 
-    let newPostElement = createRef();
-
 
     let onAddPost = () => {
         props.addPost();
