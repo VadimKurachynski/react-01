@@ -15,9 +15,8 @@ const Dialogs = (props) => {
 
     }
 
-    let dialogsElements = props.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
-    let messagesElements = props.messages.map((m) => <Message message={m.message} id={m.id}/>);
-
+    let dialogsElements = props.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
+    let messagesElements = props.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id}/>);
 
     return (
         <div className={s.content}>
@@ -33,7 +32,7 @@ const Dialogs = (props) => {
 
             <div>
                 <div>
-                    <textarea onChange={onChangeTr} value={props.textMessage}></textarea>
+                    <textarea onChange={onChangeTr} value={props.dialogsPage.textMessage}></textarea>
 
                 </div>
 
@@ -45,8 +44,6 @@ const Dialogs = (props) => {
 
         </div>
     );
-
-
 }
 
 export default Dialogs;

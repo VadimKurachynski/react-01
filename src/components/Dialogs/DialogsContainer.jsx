@@ -3,7 +3,6 @@ import React from "react";
 import {addMessageActionCreator, updateNewMessageTextActionCreator,} from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
 
-
 const DialogsContainer = (props) => {
     let state = props.store.getState();
 
@@ -17,12 +16,8 @@ const DialogsContainer = (props) => {
         <Dialogs
             addMessage={addMessage}
             onChangeTr={onChangeTr}
-            messages={state.dialogsPage.messages}
-            dialogs={state.dialogsPage.dialogs}
-            textMessage={state.dialogsPage.textMessage}
-
+            dialogsPage={state.dialogsPage}
         />
-
     );
 
 }
