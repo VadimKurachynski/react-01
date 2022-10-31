@@ -1,12 +1,11 @@
-import React, {createRef} from "react";
-import DialogItem from "./DialogItem/DialogItem";
-import Message from "./Message/Message";
+import React from "react";
 
 import {addMessageActionCreator, updateNewMessageTextActionCreator,} from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
 
 
 const DialogsContainer = (props) => {
+    debugger;
     let state=props.store.getState();
     let addMessage = () => {
         props.store.dispatch(addMessageActionCreator());
@@ -26,7 +25,8 @@ const DialogsContainer = (props) => {
         <Dialogs
             addMessage={addMessage}
             onChangeTr={onChangeTr}
-            messages={state.message}
+            messages={state.messages}
+            dialogs={state.dialogs}
             textMessage={state.textMessage}
 
         />

@@ -27,7 +27,6 @@ function App(props) {
                            />}/>
                     <Route path="/dialogs/*"
                            element = {<DialogsContainer
-
                                store={props.store}
                            />}/>
 
