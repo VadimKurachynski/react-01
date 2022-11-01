@@ -11,7 +11,7 @@ import {Provider} from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let rescan=(state)=>{
+
 
     root.render(
         <React.StrictMode>
@@ -22,15 +22,11 @@ let rescan=(state)=>{
             </BrowserRouter>
         </React.StrictMode>
     );
-}
-
- rescan(store.getState());
 
 
-store.subscribe(()=>{
-    let state=store.getState();
-rescan(state);
-})
+
+
+
 
 
 
