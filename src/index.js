@@ -18,9 +18,6 @@ let rescan=(state)=>{
             <BrowserRouter>
                 <Provider store={store}>
                 <App />
-                   {/*// store={store}*/}
-                   {/* // state={state}*/}
-                   {/* // dispatch={store.dispatch.bind(store)}*/}
             </Provider>
             </BrowserRouter>
         </React.StrictMode>
