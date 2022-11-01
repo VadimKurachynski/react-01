@@ -1,7 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-let initialiState={
+let initialiState = {
     posts: [
         {id: 1, message: `Hi, I am react developer`, likesCount: 12},
         {id: 2, message: "Hi, how are you?", likesCount: 10},
@@ -10,24 +10,23 @@ let initialiState={
     newPostText: "it-vadim"
 };
 
-const profileReducer = (state=initialiState, action) => {
+const profileReducer = (state = initialiState, action) => {
 
     switch (action.type) {
         case ADD_POST: {
-
-
-
-            let i=state.posts.length+1;
-            let newPost = {
-                id: i,
-                message: state.newPostText,
-                likesCount: 7
+            let i = state.posts.length + 1;
+            return {
+                ...state,
+                posts:[...state.posts,{id: i, message: state.newPostText, likesCount: 15000}],
+                newPostText: "",
             };
-            let stateCopy = {...state};
-            stateCopy.posts = [...state.posts];
-            stateCopy.posts.push(newPost);
-            stateCopy.newPostText = "";
-            return stateCopy;
+
+
+           // let stateCopy = {...state};
+         //   stateCopy.posts = [...state.posts];
+
+          //  stateCopy.newPostText = "";
+          //  return stateCopy;
         }
         case UPDATE_NEW_POST_TEXT: {
             let stateCopy = {...state};

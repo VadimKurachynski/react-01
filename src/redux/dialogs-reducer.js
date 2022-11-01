@@ -22,15 +22,10 @@ let initialiState={
 const dialogsReducer = (state=initialiState, action) => {
 
 
-
-
-    
-
     switch (action.type) {
 
         case ADD_MESSAGE:
             let i=state.messages.length+1;
-            console.log(i);
             return{
                 ...state,
                 textMessage : "",
