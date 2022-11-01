@@ -5,6 +5,8 @@ import React from "react";
 
 
 const Dialogs = (props) => {
+
+
     let addMessage = () => {
         props.addMessage();
     }
