@@ -13,6 +13,7 @@ let initialiState = {
 
 const usersReducer = (state = initialiState, action) => {
 
+    console.log("usersReducer---->",action);
     switch (action.type) {
         case FOLLOW:
             return {
@@ -22,6 +23,7 @@ const usersReducer = (state = initialiState, action) => {
                         return {...u, followed: true}
                     }
                     return u;
+
                 })
             }
 
