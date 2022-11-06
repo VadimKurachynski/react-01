@@ -12,7 +12,8 @@ let Users = (props) => {
 
                    </div>
                    <div>
-                       <button>Follow</button>
+                       {u.followed?<button>Follow</button>:<button>UnFollow</button>}
+
                    </div>
                </span>
                <span>
