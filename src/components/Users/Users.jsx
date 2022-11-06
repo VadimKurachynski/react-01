@@ -1,3 +1,4 @@
+import s from "./Users.module.css"
 let Users = (props) => {
 
     return (
@@ -7,7 +8,8 @@ let Users = (props) => {
 
                <span>
                    <div>
-                      {u.photoUrl}
+                       <img src={u.photoUrl}/>
+
                    </div>
                    <div>
                        <button>Follow</button>
