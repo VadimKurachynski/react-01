@@ -1,10 +1,12 @@
 import s from "./Users.module.css"
 import axios from "axios";
+// import userPhoto from "/src/assets/img/user.png";
+import  userPhoto from "../../assets/img/user.png";
+
 let Users = (props) => {
 
     if (props.users.length === 0) {
         axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response=>{
-
             props.setUsers(response.data.items);
     });
 
@@ -17,7 +19,9 @@ console.log("Users---->",props)
 
                <span>
                    <div>
-                       <img src="https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png"/>
+
+
+                        <img src={u.photos.small!=null ? u.photos.small : userPhoto}/>
 
                    </div>
                    <div>
