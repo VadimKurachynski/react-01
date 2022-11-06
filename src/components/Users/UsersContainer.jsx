@@ -1,6 +1,8 @@
 import {connect} from "react-redux";
 import {followAC, setUsersAC, unfollowAC} from "../../redux/users-reducer";
-import Users from "./Users";
+// import Users from "./UsersC";
+import Users from "./userC";
+
 
 let mapStateToProps=(state)=>{
     console.log("mapStateToProps---->UsersContainer",state);
