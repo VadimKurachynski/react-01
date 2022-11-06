@@ -10,6 +10,7 @@ import Music from "./components/Music/Music";
 import Settins from "./components/Settins/Settins";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import Users from "./components/Users/Users";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
                     <Route path="/dialogs/*" element = {<DialogsContainer  />}/>
                     <Route path="/news" element= {<News/>}/>
                     <Route path="/music" element= {<Music/>}/>
-                    <Route path="/users" element= {<Users /> }/>
+                    <Route path="/users" element= {<UsersContainer />}/>
                     <Route path="/settins" element= {<Settins/>}/>
                 </Routes>
             </div>
