@@ -4,16 +4,16 @@ const SET_USERS = 'SET_USERS';
 
 let initialiState = {
     users: [
-        {id: 1,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:false, fullName: `Dmitry`, status: "I am boss", location:{city:'Minsk',country:'Belarus'}},
-        {id: 2,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:true, fullName: `Marina`, status: "I am student", location:{city:'Moscow',country:'Russia'}},
-        {id: 3,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:false, fullName: `Lena`, status: "I am job", location:{city:'Pinsk',country:'Belarus'}},
-        {id: 4,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:true, fullName: `Vitalij`, status: "I am ingener", location:{city:'Pruzhany',country:'Belarus'}},
+        // {id: 1,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:false, fullName: `Dmitry`, status: "I am boss", location:{city:'Minsk',country:'Belarus'}},
+        // {id: 2,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:true, fullName: `Marina`, status: "I am student", location:{city:'Moscow',country:'Russia'}},
+        // {id: 3,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:false, fullName: `Lena`, status: "I am job", location:{city:'Pinsk',country:'Belarus'}},
+        // {id: 4,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:true, fullName: `Vitalij`, status: "I am ingener", location:{city:'Pruzhany',country:'Belarus'}},
     ],
 };
 
 const usersReducer = (state = initialiState, action) => {
+console.log("usersReducer--->",state,action);
 
-    console.log("usersReducer---->",action);
     switch (action.type) {
         case FOLLOW:
             return {
