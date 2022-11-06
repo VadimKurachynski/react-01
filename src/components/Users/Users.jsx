@@ -1,5 +1,5 @@
 import s from "./Users.module.css"
-import * as axios from "axios";
+import axios from "axios";
 let Users = (props) => {
 
     if (props.users.length === 0) {
@@ -7,7 +7,6 @@ let Users = (props) => {
 
             props.setUsers(response.data.items);
     });
-
 
 }
 console.log("Users---->",props)
@@ -18,7 +17,7 @@ console.log("Users---->",props)
 
                <span>
                    <div>
-                       <img src={u.photoUrl}/>
+                       <img src="https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png"/>
 
                    </div>
                    <div>
@@ -28,12 +27,12 @@ console.log("Users---->",props)
                </span>
                <span>
                    <span>
-                       <div>{u.fullName}</div>
+                       <div>{u.name}</div>
                        <div>{u.status}</div>
                    </span>
                    <span>
-                       <div>{u.location.country}</div>
-                       <div>{u.location.city}</div>
+                       <div>{"u.location.country"}</div>
+                       <div>{"u.location.city"}</div>
                    </span>
 
                </span>

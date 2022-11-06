@@ -51,5 +51,5 @@
 .app-wrapper {
   grid-area: c;
   background-color: burlywood;
-  height: 800px;
+  height: 100%;
 }
