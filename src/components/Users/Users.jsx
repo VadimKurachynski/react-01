@@ -1,6 +1,6 @@
 import s from "./Users.module.css"
 let Users = (props) => {
-debugger;
+
     if (props.users.length === 0) {
     props.setUsers([
             {
