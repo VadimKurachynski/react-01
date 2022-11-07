@@ -23,8 +23,6 @@ class Users extends React.Component {
             });
         }
 
-
-
     render() {
 
         let pagesCount=Math.ceil(this.props.totalUsersCount/this.props.pageSize);
@@ -44,7 +42,6 @@ class Users extends React.Component {
                     )}
 
                 </div>
-
 
                 {this.props.users.map(u => <div key={u.id}>
                <span>
