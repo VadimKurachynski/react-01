@@ -1,6 +1,7 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
+const SET_CURRENT_PAGE='SET_CURRENT_PAGE';
 
 let initialiState = {
     users: [
@@ -10,7 +11,8 @@ let initialiState = {
         // {id: 4,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:true, fullName: `Vitalij`, status: "I am ingener", location:{city:'Pruzhany',country:'Belarus'}},
     ],
     pageSize:5,
-    totalUsersCount:0,
+    totalUsersCount:50,
+    currentPage:2,
 };
 
 const usersReducer = (state = initialiState, action) => {
@@ -42,6 +44,10 @@ console.log("usersReducer--->",state,action);
 
         case SET_USERS:{
             return{...state,users: [...state.users,...action.users]}
+        }
+
+        case SET_CURRENT_PAGE:{
+            return{...state,currentPage: action.currentPage }
         }
 
         default:
