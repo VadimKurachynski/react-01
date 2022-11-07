@@ -2,6 +2,8 @@ const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE='SET_CURRENT_PAGE';
+const SET_TOTAL_USERS_COUNT='SET_TOTAL_USERS_COUNT';
+
 
 let initialiState = {
     users: [
@@ -11,7 +13,7 @@ let initialiState = {
         // {id: 4,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:true, fullName: `Vitalij`, status: "I am ingener", location:{city:'Pruzhany',country:'Belarus'}},
     ],
     pageSize:5,
-    totalUsersCount:50,
+    totalUsersCount:0,
     currentPage:2,
 };
 
@@ -59,6 +61,6 @@ export const followAC = (userId) => ({type: FOLLOW, userId})
 export const unfollowAC = (userId) => ({type: UNFOLLOW, userId})
 export const setUsersAC = (users) => ({type: SET_USERS, users})
 export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
-
+export const setTotalUsersCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
 
 export default usersReducer;
