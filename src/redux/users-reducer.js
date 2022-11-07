@@ -9,6 +9,8 @@ let initialiState = {
         // {id: 3,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:false, fullName: `Lena`, status: "I am job", location:{city:'Pinsk',country:'Belarus'}},
         // {id: 4,photoUrl:'https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png', followed:true, fullName: `Vitalij`, status: "I am ingener", location:{city:'Pruzhany',country:'Belarus'}},
     ],
+    pageSize:5,
+    totalUsersCount:0,
 };
 
 const usersReducer = (state = initialiState, action) => {

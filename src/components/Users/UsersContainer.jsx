@@ -7,7 +7,9 @@ import Users from "./Users";
 let mapStateToProps=(state)=>{
     console.log("mapStateToProps---->UsersContainer",state);
     return{
-        users: state.usersPage.users
+        users: state.usersPage.users,
+        pageSize: state.usersPage.pageSize,
+        totalUsersCount:state.usersPage.totalUsersCount,
     }
 }
 let mapDispatchToProps=(dispatch)=>{
