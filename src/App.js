@@ -9,7 +9,6 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settins from "./components/Settins/Settins";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import Users from "./components/Users/UsersAPiComponent";
 import UsersContainer from "./components/Users/UsersContainer";
 
 
