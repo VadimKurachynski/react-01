@@ -16,7 +16,7 @@ class UsersContainer extends React.Component {
         }
     }
 
-    onPageChanged=(pageNumber)=>{
+    onPageChanged = (pageNumber) => {
 
         this.props.setCurrentPage(pageNumber);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
@@ -25,43 +25,46 @@ class UsersContainer extends React.Component {
     }
 
     render() {
-        return <Users totalUsersCount={this.props.totalUsersCount}
-                      pageSize={this.props.pageSize}
-                      currentPage={this.props.currentPage}
-                      onPageChanged={this.onPageChanged}
-                      users={this.props.users}
-                      follow={this.props.follow}
-                      unfollow={this.props.unfollow}
+        return <>
+            <Users totalUsersCount={this.props.totalUsersCount}
+                   pageSize={this.props.pageSize}
+                   currentPage={this.props.currentPage}
+                   onPageChanged={this.onPageChanged}
+                   users={this.props.users}
+                   follow={this.props.follow}
+                   unfollow={this.props.unfollow}
 
-        />
+            />
+        </>
     }
 }
 
-let mapStateToProps=(state)=>{
-    console.log("mapStateToProps---->UsersContainer",state);
-    return{
+let mapStateToProps = (state) => {
+    console.log("mapStateToProps---->UsersContainer", state);
+    return {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,
-        totalUsersCount:state.usersPage.totalUsersCount,
-        currentPage:state.usersPage.currentPage,
+        totalUsersCount: state.usersPage.totalUsersCount,
+        currentPage: state.usersPage.currentPage,
+        isFetching: state.usersPage.isFetching,
     }
 }
-let mapDispatchToProps=(dispatch)=>{
+let mapDispatchToProps = (dispatch) => {
     console.log("mapDispatchToProps---->UsersContainer");
-    return{
-        follow: (userId)=>{
+    return {
+        follow: (userId) => {
             dispatch(followAC(userId));
         },
-        unfollow: (userId)=>{
+        unfollow: (userId) => {
             dispatch(unfollowAC(userId));
         },
-       setUsers: (users)=>{
+        setUsers: (users) => {
             dispatch(setUsersAC(users));
         },
-        setCurrentPage:(pageNumber)=>{
+        setCurrentPage: (pageNumber) => {
             dispatch(setCurrentPageAC(pageNumber))
         },
-        setTotalUsersCount:(totalCount)=>{
+        setTotalUsersCount: (totalCount) => {
             dispatch(setTotalUsersCountAC(totalCount))
         },
 
@@ -69,4 +72,4 @@ let mapDispatchToProps=(dispatch)=>{
 
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(UsersContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
