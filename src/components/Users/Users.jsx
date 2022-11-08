@@ -15,6 +15,7 @@ let Users = (props) => {
                     return(
                         <span className={props.currentPage === p ? s.selectedPage : s.selectedPagenot}
                                  onClick={(e) => {
+                                     // console.log(e);
                                      props.onPageChanged(p);
                                  }}>{p}</span>)
                 }
@@ -47,6 +48,7 @@ let Users = (props) => {
         </div>)}
 
     </div>
+
 }
 
 export default Users;
