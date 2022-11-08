@@ -4,26 +4,22 @@ import React from "react";
 
 
 let Users = (props) => {
-
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
-
     return <div>
         <div>
-
             {pages.map(p => {
-                    return <span className={props.currentPage === p ? s.selectedPage : s.selectedPagenot}
+                    return(
+                        <span className={props.currentPage === p ? s.selectedPage : s.selectedPagenot}
                                  onClick={(e) => {
                                      props.onPageChanged(p);
-                                 }}>{p}</span>
+                                 }}>{p}</span>)
                 }
             )}
-
         </div>
-
         {props.users.map(u => <div key={u.id}>
                <span>
                    <div>
@@ -51,8 +47,6 @@ let Users = (props) => {
         </div>)}
 
     </div>
-
-
 }
 
 export default Users;
