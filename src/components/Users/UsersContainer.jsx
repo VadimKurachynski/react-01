@@ -3,7 +3,7 @@ import React from "react";
 import axios from "axios";
 import {followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, unfollowAC} from "../../redux/users-reducer";
 import Users from "./Users";
-
+import preloader from "../../assets/img/spinner.gif";
 
 class UsersContainer extends React.Component {
 
@@ -26,6 +26,7 @@ class UsersContainer extends React.Component {
 
     render() {
         return <>
+            {this.props.isFetching?<img src={preloader} />:null}
             <Users totalUsersCount={this.props.totalUsersCount}
                    pageSize={this.props.pageSize}
                    currentPage={this.props.currentPage}
