@@ -3,7 +3,7 @@ import axios from "axios";
 // import userPhoto from "/src/assets/img/user.png";
 import userPhoto from "../../assets/img/user.png";
 import React from 'react';
-
+import Users from "./Users";
 
 class UsersAPIComponent extends React.Component {
 
