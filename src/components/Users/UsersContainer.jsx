@@ -1,32 +1,41 @@
 import {connect} from "react-redux";
 import React from "react";
 import axios from "axios";
-import {followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, unfollowAC} from "../../redux/users-reducer";
+import {
+    followAC,
+    setCurrentPageAC,
+    setTotalUsersCountAC,
+    setUsersAC,
+    toggleIsFetchingAC,
+    unfollowAC
+} from "../../redux/users-reducer";
 import Users from "./Users";
-import preloader from "../../assets/img/spinner.gif";
+
 
 class UsersContainer extends React.Component {
 
     componentDidMount() {
-        if (this.props.users.length === 0) {
+    this.props.toggleIsFetching(true);
             axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
+                this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
                 this.props.setTotalUsersCount(response.data.totalCount);
             });
-        }
+
     }
 
     onPageChanged = (pageNumber) => {
-
+        this.props.toggleIsFetching(true);
         this.props.setCurrentPage(pageNumber);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
+            this.props.toggleIsFetching(false);
             this.props.setUsers(response.data.items);
         });
     }
 
     render() {
         return <>
-            {this.props.isFetching?<img src={preloader} />:null}
+            {/*{this.props.isFetching?<img src={preloader} />:null}*/}
             <Users totalUsersCount={this.props.totalUsersCount}
                    pageSize={this.props.pageSize}
                    currentPage={this.props.currentPage}
@@ -67,6 +76,9 @@ let mapDispatchToProps = (dispatch) => {
         },
         setTotalUsersCount: (totalCount) => {
             dispatch(setTotalUsersCountAC(totalCount))
+        },
+        toggleIsFetching: (isFetching) => {
+            dispatch(toggleIsFetchingAC(isFetching))
         },
 
     }
