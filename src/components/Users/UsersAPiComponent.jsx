@@ -31,8 +31,6 @@ class UsersAPIComponent extends React.Component {
         }
 
         return <Users />
-
-
     }
 }
 
