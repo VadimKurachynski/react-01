@@ -59,30 +59,55 @@ let mapStateToProps = (state) => {
         isFetching: state.usersPage.isFetching,
     }
 }
-let mapDispatchToProps = (dispatch) => {
-    console.log("mapDispatchToProps---->UsersContainer");
-    return {
-        follow: (userId) => {
-            dispatch(followAC(userId));
-        },
-        unfollow: (userId) => {
-            dispatch(unfollowAC(userId));
-        },
-        setUsers: (users) => {
-            dispatch(setUsersAC(users));
-        },
-        setCurrentPage: (pageNumber) => {
-            dispatch(setCurrentPageAC(pageNumber))
-        },
-        setTotalUsersCount: (totalCount) => {
-            dispatch(setTotalUsersCountAC(totalCount))
-        },
-        toggleIsFetching: (isFetching) => {
-            dispatch(toggleIsFetchingAC(isFetching))
-        },
+// let mapDispatchToProps = (dispatch) => {
+//     console.log("mapDispatchToProps---->UsersContainer");
+//     return {
+//         follow: (userId) => {
+//             dispatch(followAC(userId));
+//         },
+//         unfollow: (userId) => {
+//             dispatch(unfollowAC(userId));
+//         },
+//         setUsers: (users) => {
+//             dispatch(setUsersAC(users));
+//         },
+//         setCurrentPage: (pageNumber) => {
+//             dispatch(setCurrentPageAC(pageNumber))
+//         },
+//         setTotalUsersCount: (totalCount) => {
+//             dispatch(setTotalUsersCountAC(totalCount))
+//         },
+//         toggleIsFetching: (isFetching) => {
+//             dispatch(toggleIsFetchingAC(isFetching))
+//         },
+//
+//     }
+//
+// }
 
-    }
+{
+    follow: (userId) => {
+        dispatch(followAC(userId));
+    },
+        unfollow: (userId) => {
+    dispatch(unfollowAC(userId));
+},
+    setUsers: (users) => {
+    dispatch(setUsersAC(users));
+},
+    setCurrentPage: (pageNumber) => {
+    dispatch(setCurrentPageAC(pageNumber))
+},
+    setTotalUsersCount: (totalCount) => {
+    dispatch(setTotalUsersCountAC(totalCount))
+},
+    toggleIsFetching: (isFetching) => {
+    dispatch(toggleIsFetchingAC(isFetching))
+},
 
 }
+
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
