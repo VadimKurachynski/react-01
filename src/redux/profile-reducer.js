@@ -28,6 +28,12 @@ const profileReducer = (state = initialiState, action) => {
             return {
                 ...state,
                 newPostText: action.newText,
+            };
+        }
+        case SET_USER_PROFILE: {
+            return {
+                ...state,
+                profile:action.profile,
             }
         }
         default:
@@ -37,7 +43,7 @@ const profileReducer = (state = initialiState, action) => {
 
 export const addPostActionCreator = () => { return {type: ADD_POST}}
 export const updateNewPostTextActionCreator = (text) => { return {type: UPDATE_NEW_POST_TEXT, newText: text}}
-export const setUserProfile = () => { return {type: ADD_POST}}
+export const setUserProfile = (profile) => { return {type: SET_USER_PROFILE,profile}}
 
 
 
