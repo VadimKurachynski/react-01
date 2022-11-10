@@ -10,6 +10,7 @@ import Music from "./components/Music/Music";
 import Settins from "./components/Settins/Settins";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
             <Nav/>
             <div className="app-wrapper-content">
                 <Routes>
-                    <Route path="/profile/*" element={<Profile />}/>
+                    <Route path="/profile/*" element={<ProfileContainer />}/>
                     <Route path="/dialogs/*" element = {<DialogsContainer  />}/>
                     <Route path="/news" element= {<News/>}/>
                     <Route path="/music" element= {<Music/>}/>
