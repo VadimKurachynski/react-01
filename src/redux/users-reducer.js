@@ -56,7 +56,7 @@ console.log("usersReducer--->",state,action);
             return{...state,totalUsersCount: action.totalUsersCount }
         }
         case TOGGLE_IS_FETCHING:{
-            console.log("ttttttttt")
+
             return{...state,isFetching: action.isFetching }
         }
 

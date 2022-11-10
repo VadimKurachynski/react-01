@@ -21,7 +21,6 @@ class UsersContainer extends React.Component {
             this.props.setUsers(response.data.items);
             this.props.setTotalUsersCount(response.data.totalCount);
         });
-
     }
 
     onPageChanged = (pageNumber) => {
