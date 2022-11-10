@@ -17,6 +17,8 @@ componentDidMount() {
     }
 }
 
-let mapStateToProps=(state)=>
+let mapStateToProps=(state)=>({
+    a:34;
+});
 
-export default connect() (ProfileContainer);
+export default connect(mapStateToProps,{setUserProfile}) (ProfileContainer);
