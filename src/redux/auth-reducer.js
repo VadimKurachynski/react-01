@@ -16,6 +16,7 @@ console.log("authReducer--->",state, action);
             return {
                 ...state,
                 ...action.data,
+
                 }
 
         default:
