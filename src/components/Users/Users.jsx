@@ -31,13 +31,12 @@ let Users = (props) => {
                        </NavLink>
                    </div>
                    <div>
-                       {u.followed ? <button onClick={() => { props.unfollow(u.id)}}> follow</button>
-                       : <button onClick={() => {
+                       {u.followed ? <button onClick={() => {
 
-                               axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`).then(response => {
-                                   this.props.toggleIsFetching(false);
-                                   this.props.setUsers(response.data.items);
-                                   this.props.setTotalUsersCount(response.data.totalCount);
+                           props.unfollow(u.id)}}> follow</button>
+                       : <button onClick={() => {
+                               axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{},{withCredentials:true}).then(response => {
+                                 if(response.data.resultCode==0){ props.follow(u.id);}
                                });
 
 
