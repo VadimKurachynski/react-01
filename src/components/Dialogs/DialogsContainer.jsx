@@ -3,7 +3,6 @@ import {addMessageActionCreator, updateNewMessageTextActionCreator,} from "../..
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 
-
 let mapStateToProps = (state) => {
 
     return {
