@@ -6,6 +6,7 @@ import axios from "axios";
 import {usersAPI} from "../../api/api";
 
 let Users = (props) => {
+    // debugger;
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
@@ -31,23 +32,27 @@ let Users = (props) => {
                        </NavLink>
                    </div>
                    <div>
-                       {u.followed ? <button onClick={() => {
-
+                       {u.followed ? <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+                            props.toggleFollowingProgress(true,u.id);
                                usersAPI.UsersDelete(u.id)
                                    .then(resultCode => {
                                        if (resultCode === 0) {
                                            props.unfollow(u.id);
                                        }
-                                   });
+                                           props.toggleFollowingProgress(false,u.id);
+                                   }
+
+                                   );
                            }}>Unfollow</button>
 
-                           : <button onClick={() => {
-
+                           : <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+                               props.toggleFollowingProgress(true,u.id);
                                usersAPI.UsersPost(u.id)
                                    .then(resultCode => {
                                        if (resultCode === 0) {
                                            props.follow(u.id);
                                        }
+                                       props.toggleFollowingProgress(false,u.id);
                                    });
 
 

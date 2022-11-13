@@ -18,7 +18,6 @@ export const usersAPI = {
     UsersDelete(id){
     return instance.delete(`follow/${id}`)
     .then(response => {
-        debugger;
         return response.data.resultCode;
 
     });
@@ -27,7 +26,6 @@ export const usersAPI = {
     UsersPost(id){
         return instance.post(`follow/${id}`,{})
             .then(response => {
-                debugger;
                 return response.data.resultCode;
 
             });
