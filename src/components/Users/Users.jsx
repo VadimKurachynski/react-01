@@ -40,7 +40,6 @@ let Users = (props) => {
                                        }
                                            props.toggleFollowingProgress(false,u.id);
                                    }
-
                                    );
                            }}>Unfollow</button>
 
