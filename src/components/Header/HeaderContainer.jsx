@@ -16,7 +16,6 @@ class HeaderContainer extends React.Component {
 
             });
 
-
     }
 
     render() {
