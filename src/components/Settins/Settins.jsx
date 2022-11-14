@@ -8,5 +8,4 @@ const Settins=(props)=>{
     );
 
 }
-
 export default Settins;
