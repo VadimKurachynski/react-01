@@ -25,7 +25,6 @@ class UsersContainer extends React.Component {
                 this.props.setTotalUsersCount(data.totalCount);
             });
 
-
     }
 
     onPageChanged = (pageNumber) => {
@@ -92,7 +91,6 @@ let mapStateToProps = (state) => {
 //     }
 //
 // }
-
 
 export default connect(mapStateToProps, {
     follow,
