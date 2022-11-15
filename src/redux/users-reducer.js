@@ -88,7 +88,8 @@ export const toggleFollowingProgress = (isFetching,userId) => ({type: TOGGLE_IS_
 export default usersReducer;
 
 
-export const getUsersThunk=(dispatch)=>{
+export const getUsersThunkCreator=()=>{
+    return (dispatch)=>{
 
  dispatch(toggleIsFetching(true)) ;
 
@@ -101,4 +102,5 @@ export const getUsersThunk=(dispatch)=>{
 
 
 
+}
 }
