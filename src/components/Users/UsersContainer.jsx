@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import React from "react";
 import {
-    follow, getUsersThunkCreator,
+    follow, getUsers, getUsersThunkCreator,
     setCurrentPage,
     setTotalUsersCount,
     setUsers, toggleFollowingProgress,
@@ -86,10 +86,9 @@ let mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
     follow,
     unfollow,
-
     setCurrentPage,
     toggleFollowingProgress,
-    getUsers:getUsersThunkCreator,
+    getUsers,
    // toggleIsFetching,
    // setTotalUsersCount,
    //  setUsers,

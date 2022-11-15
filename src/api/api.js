@@ -15,16 +15,16 @@ export const usersAPI = {
         });
     },
 
-    UsersDelete(id){
-    return instance.delete(`follow/${id}`)
+    unfollow(userId){
+    return instance.delete(`follow/${userId}`)
     .then(response => {
         return response.data.resultCode;
 
     });
 },
 
-    UsersPost(id){
-        return instance.post(`follow/${id}`,{})
+    follow(userId){
+        return instance.post(`follow/${userId}`,{})
             .then(response => {
                 return response.data.resultCode;
 
