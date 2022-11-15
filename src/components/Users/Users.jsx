@@ -31,30 +31,20 @@ let Users = (props) => {
                        </NavLink>
                    </div>
                    <div>
-                       {u.followed ? <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
-                            props.toggleFollowingProgress(true,u.id);
-                               usersAPI.unfollow(u.id)
-                                   .then(resultCode => {
-                                       if (resultCode === 0) {
-                                           props.unfollow(u.id);
-                                       }
-                                           props.toggleFollowingProgress(false,u.id);
-                                   }
-                                   );
-                           }}>Unfollow</button>
+                       {u.followed ? <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                             onClick={() => {
+                                                 props.unfollow(u.id);
+                                             }}>Unfollow</button>
 
-                           : <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
-                               props.toggleFollowingProgress(true,u.id);
-                               usersAPI.follow(u.id)
-                                   .then(resultCode => {
-                                       if (resultCode === 0) {
-                                           props.follow(u.id);
-                                       }
-                                       props.toggleFollowingProgress(false,u.id);
-                                   });
+                           : <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                     onClick={() => {
+                                         props.follow(u.id);
+                                     }}>Follow</button>}
 
 
-                           }}>Follow</button>}
+
+
+
 
 
                    </div>
