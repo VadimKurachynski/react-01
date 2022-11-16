@@ -28,7 +28,14 @@ export const usersAPI = {
                 return response.data.resultCode;
 
             });
+    },
+
+    getProfile(userId){
+        return axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`);
+
     }
+
+
 
 }
 
