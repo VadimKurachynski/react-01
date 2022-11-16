@@ -56,5 +56,4 @@ export const getUserProfile = (userId) => (dispatch)=>{
 }
 
 
-
 export default profileReducer;
