@@ -19,15 +19,9 @@ componentDidMount() {
 let userId=this.props.match.params.userId;
 if(!userId) {userId=26672};
 
-
 usersAPI.getProfile(userId).then(response => { this.props.setUserProfile(response.data);});
 
 
-
-
-    axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(response => {
-         this.props.setUserProfile(response.data);
-    });
 }
 
     render() {

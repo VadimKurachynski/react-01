@@ -13,7 +13,6 @@ export const usersAPI = {
             return response.data;
         });
     },
-
     unfollow(userId){
     return instance.delete(`follow/${userId}`)
     .then(response => {
@@ -21,7 +20,6 @@ export const usersAPI = {
 
     });
 },
-
     follow(userId){
         return instance.post(`follow/${userId}`,{})
             .then(response => {
@@ -29,16 +27,15 @@ export const usersAPI = {
 
             });
     },
-
     getProfile(userId){
-        return axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`);
-
+        return instance.get(`profile/${userId}`);
     }
-
-
-
 }
 
-
+export const autAPI = {
+    me(){
+        return  instance.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {withCredentials: true})
+    }
+}
 
 
