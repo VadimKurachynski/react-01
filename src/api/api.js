@@ -33,9 +33,7 @@ export const usersAPI = {
 }
 
 export const autAPI = {
-    me(){
-        return  instance.get(`auth/me`);
-    }
+    me(){ return  instance.get(`auth/me`); }
 }
 
 
