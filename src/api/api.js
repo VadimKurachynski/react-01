@@ -34,7 +34,7 @@ export const usersAPI = {
 
 export const autAPI = {
     me(){
-        return  instance.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {withCredentials: true})
+        return  instance.get(`auth/me`);
     }
 }
 
