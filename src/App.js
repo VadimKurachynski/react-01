@@ -25,6 +25,7 @@ function App() {
                     <Route path="/music" element= {<Music/>}/>
                     <Route path="/users" element= {<UsersContainer />}/>
                     <Route path="/settins" element= {<Settins/>}/>
+                    <Route path="/login" element= {<UsersContainer />}/>
                 </Routes>
             </div>
         </div>
