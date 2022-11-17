@@ -11,6 +11,8 @@ import {
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
 import {usersAPI} from "../../api/api";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import Dialogs from "../Dialogs/Dialogs";
 
 
 class UsersContainer extends React.Component {
@@ -83,6 +85,8 @@ let mapStateToProps = (state) => {
 //
 // }
 
+let AuthRedirectComponent=withAuthRedirect(UsersContainer);//hoc
+
 export default connect(mapStateToProps, {
     follow,
     unfollow,
@@ -92,7 +96,7 @@ export default connect(mapStateToProps, {
    // toggleIsFetching,
    // setTotalUsersCount,
    //  setUsers,
-})(UsersContainer);
+})(AuthRedirectComponent);
 
 
 
