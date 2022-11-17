@@ -35,10 +35,12 @@ this.props.getUserProfile(userId);
 
 let AuthRedirectComponent=withAuthRedirect(ProfileContainer);//hoc
 
-
 let mapStateToPropsForRedirect=(state)=>({
     isAuth:state.auth.isAuth,
 });
+AuthRedirectComponent=connect(mapStateToPropsForRedirect)(AuthRedirectComponent);//hoc
+
+
 
 let mapStateToProps=(state)=>({
     profile:state.profilePage.profile,
