@@ -32,6 +32,8 @@ this.props.getUserProfile(userId);
     }
 }
 
+let AuthRedirec
+
 let mapStateToProps=(state)=>({
     profile:state.profilePage.profile,
     isAuth:state.auth.isAuth,
