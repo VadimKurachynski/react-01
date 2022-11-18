@@ -5,7 +5,6 @@ state={
     editMode: true
 }
 
-
     render() {
         return (
 
