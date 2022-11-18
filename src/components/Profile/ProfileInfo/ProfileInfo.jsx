@@ -11,8 +11,11 @@ const ProfileInfo = (props) => {
     return (
         <div>
             <div className={s.cont_img}>
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOILfvBu6_5wt4RB_1Mz5l4Uenm8yXvW0qiA&usqp=CAU"/>
+                    {/*<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOILfvBu6_5wt4RB_1Mz5l4Uenm8yXvW0qiA&usqp=CAU"/>*/}
+            </div>
+
+            <div>
+                <ProfileStatus />
             </div>
 
             <div className={s.descriptionBlock}>
