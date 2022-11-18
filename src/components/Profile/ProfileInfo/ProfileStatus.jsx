@@ -1,19 +1,18 @@
-
 import React from "react";
 
-const ProfileStatus = (props) => {
+class ProfileStatus extends React.Component {
 
 
-    return (
 
-        <div>
-           <div><span>{props.status}44</span></div>
-            <div><input value={props.status} /></div>
-        </div>
+    render() {
+        return (
 
-
-)
-
+            <div>
+                <div><span>{this.props.status}</span></div>
+                <div><input value={this.props.status}/></div>
+            </div>
+        )
+    }
 }
 
 
