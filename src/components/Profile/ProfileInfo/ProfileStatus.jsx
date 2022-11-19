@@ -17,7 +17,6 @@ activateEditMode(){
         })
     }
 
-
     render() {
         return (
 
@@ -26,9 +25,8 @@ activateEditMode(){
                     <div><span onClick={this.activateEditMode.bind(this)}>{this.props.status}</span></div>
                 }
                 {this.state.editMode &&
-                    <div>    <input  onBlur={this.activateEditMode.bind(this)} value={this.props.status}/>     </div>
+                    <div>    <input autoFocus={true} onBlur={this.deactivateEditMode.bind(this)} value={this.props.status}/>     </div>
                 }
-
             </div>
         )
     }
