@@ -13,7 +13,7 @@ activateEditMode(){
 
     deactivateEditMode(){
         this.setState({
-            editMode:true
+            editMode:false
         })
     }
 
@@ -26,7 +26,7 @@ activateEditMode(){
                     <div><span onClick={this.activateEditMode.bind(this)}>{this.props.status}</span></div>
                 }
                 {this.state.editMode &&
-                    <div><input value={this.props.status}/></div>
+                    <div>    <input  onBlur={this.activateEditMode.bind(this)} value={this.props.status}/>     </div>
                 }
 
             </div>
