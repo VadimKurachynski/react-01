@@ -10,13 +10,11 @@ activateEditMode(){
         editMode:true
     })
 }
-
     deactivateEditMode(){
         this.setState({
             editMode:false
         })
     }
-
     render() {
         return (
 
