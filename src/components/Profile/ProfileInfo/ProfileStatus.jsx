@@ -9,8 +9,15 @@ activateEditMode(){
     this.setState({
         editMode:true
     })
-
 }
+
+    deactivateEditMode(){
+        this.setState({
+            editMode:true
+        })
+    }
+
+
     render() {
         return (
 
