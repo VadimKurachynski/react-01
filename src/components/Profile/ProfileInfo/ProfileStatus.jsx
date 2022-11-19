@@ -9,8 +9,7 @@ activateEditMode(){
     this.setState({
         editMode:true
     })
-    // this.state.editMode=true;
-    // // this.forceUpdate();
+
 }
     render() {
         return (
