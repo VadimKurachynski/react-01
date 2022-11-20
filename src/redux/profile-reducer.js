@@ -15,11 +15,10 @@ let initialiState = {
     ],
     newPostText: "it-vadim",
     profile: null,
-    status:"начальный",
+    status:"",
 };
 
 const profileReducer = (state = initialiState, action) => {
-
     switch (action.type) {
         case ADD_POST: {
             let i = state.posts.length + 1;
