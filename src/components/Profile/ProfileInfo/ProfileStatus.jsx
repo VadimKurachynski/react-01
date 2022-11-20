@@ -4,7 +4,6 @@ class ProfileStatus extends React.Component {
 state={
     editMode: false
 }
-
 activateEditMode(){
     this.setState({
         editMode:true
