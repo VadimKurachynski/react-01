@@ -5,12 +5,11 @@ state={
     editMode: false
 }
 activateEditMode=()=>{
-    console.log("this:",this);
     this.setState({
         editMode:true
     })
 }
-    deactivateEditMode(){
+    deactivateEditMode=()=>{
         this.setState({
             editMode:false
         })
@@ -20,12 +19,12 @@ activateEditMode=()=>{
 
             <div>
                 {!this.state.editMode &&
-                    // <div><span onClick={this.activateEditMode.bind(this)}>{this.props.status}</span></div>
-                    <div><span onClick={this.activateEditMode.bind(this)}>{this.props.status}</span></div>
+
+                    <div><span onClick={this.activateEditMode}>{this.props.status}</span></div>
 
                 }
                 {this.state.editMode &&
-                    <div>    <input autoFocus={true} onBlur={this.deactivateEditMode.bind(this)} value={this.props.status}/>     </div>
+                    <div>    <input autoFocus={true} onBlur={this.deactivateEditMode} value={this.props.status}/>     </div>
                 }
             </div>
         )
