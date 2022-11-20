@@ -19,12 +19,10 @@ activateEditMode=()=>{
 
             <div>
                 {!this.state.editMode &&
-
                     <div><span onClick={this.activateEditMode}>{this.props.status}</span></div>
-
                 }
                 {this.state.editMode &&
-                    <div>    <input autoFocus={true} onBlur={this.deactivateEditMode} value={this.props.status}/>     </div>
+                    <div>    <input autoFocus={true} onBlur={this.deactivateEditMode} defaultValue={this.props.status}/>     </div>
                 }
             </div>
         )
