@@ -22,7 +22,7 @@ componentDidMount() {
 let userId=this.props.match.params.userId;
 if(!userId) {userId=26672};
 this.props.getUserProfile(userId);
-
+this.props.getUserStatus(userId);
 
 
 }
@@ -39,6 +39,7 @@ this.props.getUserProfile(userId);
 
 let mapStateToProps=(state)=>({
     profile:state.profilePage.profile,
+    status:state.profilePage.status,
 });
 
 
