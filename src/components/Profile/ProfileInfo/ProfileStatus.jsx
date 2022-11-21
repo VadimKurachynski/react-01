@@ -31,7 +31,7 @@ activateEditMode=()=>{
 
             <div>
                 {!this.state.editMode &&
-                    <div><span onClick={this.activateEditMode}>{this.props.status}</span></div>
+                    <div><span onClick={this.activateEditMode}>{this.props.status }</span></div>
                 }
                 {this.state.editMode &&
                     <div>    <input  onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode} value={this.state.status}/>     </div>

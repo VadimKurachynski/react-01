@@ -15,9 +15,8 @@ let initialiState = {
     ],
     newPostText: "it-vadim",
     profile: null,
-    status:"",
+    status:"нач",
 };
-
 const profileReducer = (state = initialiState, action) => {
     switch (action.type) {
         case ADD_POST: {
