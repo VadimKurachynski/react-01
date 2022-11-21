@@ -13,7 +13,7 @@ let reducers=combineReducers({
      dialogsPage: dialogsReducer,
      sidebar: sidebarReducer,
      usersPage: usersReducer,
-    auth: authReducer,
+     auth: authReducer,
 });
 
 let store =legacy_createStore(reducers,applyMiddleware(thunkMiddleware));
