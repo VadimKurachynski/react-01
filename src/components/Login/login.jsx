@@ -17,11 +17,10 @@ const LoginForm = (props) => {
     );
 }
 
-
 const Login = () => {
     return (
         <div>
-            <h1>LOGIN</h1>
+            <h2>LOGIN</h2>
           <LoginForm />
         </div>
     );
