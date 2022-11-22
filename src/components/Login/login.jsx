@@ -14,9 +14,12 @@ const Login = () => {
 
                 </div>
                 <div>
-                    <input type={"checkbox"}/>
+                    <input type={"checkbox"}/>remember me
                 </div>
-
+                <div>
+                    <input type={"checkbox"}/>remember me
+                </div>
+                <butto></butto>
             </form>
         </div>
     );
