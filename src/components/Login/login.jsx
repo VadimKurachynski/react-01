@@ -1,4 +1,5 @@
 import React from "react";
+import {reduxForm} from "redux-form";
 
 const LoginForm = (props) => {
     return (
@@ -16,12 +17,14 @@ const LoginForm = (props) => {
             </form>
     );
 }
+const LoginReduxForm=reduxForm({form:'login'})(LoginForm)
+
 
 const Login = () => {
     return (
         <div>
             <h2>LOGIN</h2>
-          <LoginForm />
+          <LoginReduxForm />
         </div>
     );
 }
