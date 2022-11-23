@@ -21,11 +21,14 @@ const LoginForm = (props) => {
 const LoginReduxForm=reduxForm({form:'login'})(LoginForm)
 
 
-const Login = () => {
+const Login = (props) => {
+    const onSubmit=(formData)=>{
+        console.log(formData);
+    }
     return (
         <div>
             <h2>LOGIN</h2>
-          <LoginReduxForm onSubmit={()} />
+          <LoginReduxForm onSubmit={} />
         </div>
     );
 }
