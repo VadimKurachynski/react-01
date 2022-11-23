@@ -25,7 +25,7 @@ const Login = () => {
     return (
         <div>
             <h2>LOGIN</h2>
-          <LoginReduxForm />
+          <LoginReduxForm onSubmit={()} />
         </div>
     );
 }
