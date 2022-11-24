@@ -21,9 +21,7 @@ let userId=this.props.match.params.userId;
 if(!userId) {userId=26672};
 this.props.getUserProfile(userId);
 this.props.getStatus(userId);
-
 }
-
     render() {
 
         return (
@@ -32,20 +30,13 @@ this.props.getStatus(userId);
     }
 }
 
-
-
 let mapStateToProps=(state)=>({
     profile:state.profilePage.profile,
     status:state.profilePage.status,
 
 });
 
-
-
-
-
 export default compose(
     connect(mapStateToProps,{getUserProfile,getStatus,updateStatus}),
     withRouter,
-    // withAuthRedirect,
 )(ProfileContainer)
