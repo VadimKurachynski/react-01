@@ -19,7 +19,6 @@ const LoginForm = (props) => {
 }
 const LoginReduxForm=reduxForm({form:'login'})(LoginForm)
 
-
 const Login = () => {
 
     const onSubmit1=(formData)=>{

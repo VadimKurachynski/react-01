@@ -4,10 +4,8 @@ import axios from "axios";
 import {connect} from "react-redux";
 import {getStatus, getUserProfile, updateStatus} from "../../redux/profile-reducer";
 import {Navigate, useParams} from 'react-router-dom';
-import {usersAPI} from "../../api/api";
-import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
-import Dialogs from "../Dialogs/Dialogs";
+
 
 export function withRouter(Children){
     return(props)=>{
@@ -23,7 +21,6 @@ let userId=this.props.match.params.userId;
 if(!userId) {userId=26672};
 this.props.getUserProfile(userId);
 this.props.getStatus(userId);
-
 
 }
 
