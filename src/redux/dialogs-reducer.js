@@ -1,5 +1,5 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_POST_MESSSAGE = 'UPDATE-NEW-POST-MESSSAGE';
+// const UPDATE_NEW_POST_MESSSAGE = 'UPDATE-NEW-POST-MESSSAGE';
 
 let initialiState={
     dialogs: [
@@ -15,7 +15,7 @@ let initialiState={
         {id: 2, message: `O no, does your friends play soccer?`},
         {id: 3, message: `Yes, i can play the gitare!`},
     ],
-    textMessage: "vadim"
+  //  textMessage: "vadim"
 };
 
 
@@ -25,18 +25,19 @@ const dialogsReducer = (state=initialiState, action) => {
     switch (action.type) {
 
         case ADD_MESSAGE:
-            let i=state.messages.length+1;
+
+            let body=action.newMessageBody;
             return{
                 ...state,
-                textMessage : "",
-                messages: [...state.messages,{id: i, message: state.textMessage}]
+
+                messages: [...state.messages,{id: 6, message: body}]
             };
 
-        case UPDATE_NEW_POST_MESSSAGE:
-           return{
-                ...state,
-                textMessage : action.newText,
-            };
+        // case UPDATE_NEW_POST_MESSSAGE:
+        //    return{
+        //         ...state,
+        //        newMessageBody : action.body,
+        //     };
 
         default:
             return state;
@@ -44,12 +45,12 @@ const dialogsReducer = (state=initialiState, action) => {
 
 }
 
-export const addMessageActionCreator = () => {
-    return {type: ADD_MESSAGE}
+export const addMessageActionCreator = (newMessageBody) => {
+    return {type: ADD_MESSAGE,newMessageBody}
 }
-export const updateNewMessageTextActionCreator = (text) => {
-    return {type: UPDATE_NEW_POST_MESSSAGE, newText: text}
-}
+// export const updateNewMessageTextActionCreator = (body) => {
+//     return {type: UPDATE_NEW_POST_MESSSAGE, body: body}
+// }
 
 
 export default dialogsReducer;
