@@ -9,17 +9,6 @@ import {Field, reduxForm} from "redux-form";
 const Dialogs = (props) => {
 
 
-    // let addMessage = () => {
-    //     props.addMessage();
-    // }
-
-    // let onChangeTr = (e) => {
-    //     let text = e.target.value;
-    //     props.onChangeTr(text);
-    //
-    // }
-
-
     let dialogsElements = props.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id} key={d.id}/>);
     let messagesElements = props.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id} key={m.id}/>);
 
