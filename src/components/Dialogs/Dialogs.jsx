@@ -26,6 +26,7 @@ const Dialogs = (props) => {
 
     const onSubmit1=(formData)=>{
         console.log(formData);
+        props.addMessage();
     }
 
 
@@ -54,7 +55,7 @@ const AddMessageForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field placeholder={"text"} name={"login"} type={"textarea"} component={"input"}/>
+                <Field placeholder={"text"} name={"textMessage"} type={"textarea"} component={"input"}/>
             </div>
             <div>
                 <button>add</button>
