@@ -16,7 +16,7 @@ let reducers = combineReducers({
     usersPage: usersReducer,
     auth: authReducer,
     form: formReducer,
-    formMessages:formReducer,
+
 });
 
 let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware));
