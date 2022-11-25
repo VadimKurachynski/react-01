@@ -44,7 +44,7 @@ const Dialogs = (props) => {
             </div>
 
             <div>
-                <LoginReduxForm onSubmit={onSubmit1} />
+                <AddMessageReduxForm onSubmit={onSubmit1} />
             </div>
         </div>
     );
@@ -55,7 +55,7 @@ const AddMessageForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field placeholder={"text"} name={"textMessage"} type={"textarea"} component={"input"}/>
+                <Field placeholder={"text"} name={"newMessageBody"} type={"textarea"} component={"textarea"}/>
             </div>
             <div>
                 <button>add</button>
@@ -63,6 +63,6 @@ const AddMessageForm = (props) => {
         </form>
     )
 }
-const LoginReduxForm = reduxForm({form: 'MessageForm'})(AddMessageForm)
+const AddMessageReduxForm = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm)
 
 export default Dialogs;
