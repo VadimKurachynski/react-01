@@ -24,9 +24,9 @@ const Dialogs = (props) => {
     let messagesElements = props.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id} key={m.id}/>);
 
 
-    const onSubmit1=(formData)=>{
-        console.log(formData);
-        props.addMessage();
+    let  addNewMessage=(props)=>{
+        console.log(props.newMessageBody);
+
     }
 
 
@@ -44,7 +44,7 @@ const Dialogs = (props) => {
             </div>
 
             <div>
-                <AddMessageReduxForm onSubmit={onSubmit1} />
+                <AddMessageReduxForm onSubmit={addNewMessage} />
             </div>
         </div>
     );
@@ -63,6 +63,6 @@ const AddMessageForm = (props) => {
         </form>
     )
 }
-const AddMessageReduxForm = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm)
+const AddMessageReduxForm = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm);
 
 export default Dialogs;
