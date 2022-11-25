@@ -18,10 +18,12 @@ const MyPosts = (props) => {
         <div className={s.postBlock}>
             <h3>My posts</h3>
             <div>
-                <div><textarea onChange={onPostChange}value={props.profilePage.newPostText}/></div>
-                <div>
-                    <button onClick={onAddPost}>Add post</button>
-                </div>
+                {/*<div><textarea onChange={onPostChange}value={props.profilePage.newPostText}/></div>*/}
+                {/*<div>*/}
+                {/*    <button onClick={onAddPost}>Add post</button>*/}
+                {/*</div>*/}
+
+                <AddPostReduxForm />
             </div>
             {postsElements}
         </div>
@@ -31,7 +33,7 @@ const MyPosts = (props) => {
 const AddPostForm=(props)=>{
     return (
         <form onSubmit={props.handleSubmit}>
-            <div><Field placeholder={"add post"} name={"newPostBody"} type={"textarea"}/></div>
+            <div><Field component={"textarea"} placeholder={"add post"} name={"newPostBody"} type={"input"}/></div>
             <div><button>Add post</button></div>
         </form>
     )
