@@ -8,8 +8,6 @@ border: solid red 2px;
 {
  border: solid black 1px;
 }
-
-
 .formControl.error span{
  color:red;
 }
