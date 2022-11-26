@@ -2,7 +2,6 @@ import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React from "react";
-import {Navigate} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required1} from "../../utils/validators/validators";
 import {Textarea} from "../FormControls/formsControls";
@@ -10,16 +9,13 @@ const maxLength10=maxLengthCreator(10);
 
 const Dialogs = (props) => {
 
-
     let dialogsElements = props.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id} key={d.id}/>);
     let messagesElements = props.dialogsPage.messages.map((m) => <Message message={m.message} id={m.id} key={m.id}/>);
-
 
     let  addNewMessage=(values)=>{
         props.addMessage(values.newMessageBody);
 
     }
-
 
     return (
         <div className={s.content}>
