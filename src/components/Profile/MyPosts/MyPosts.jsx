@@ -5,15 +5,12 @@ import {maxLengthCreator, required1} from "../../../utils/validators/validators"
 import {Textarea} from "../../FormControls/formsControls";
 const maxLength10=maxLengthCreator(10);
 
-
-
 const MyPosts = (props) => {
     let postsElements =
         props.profilePage.posts.map(p => <Post message={p.message} like={p.likesCount} id={p.id} key={p.id}/>)
      let addNewPost = (values) => {
         props.addPost(values.newPostBody);
      }
-
 
     return (
         <div className={s.postBlock}>
