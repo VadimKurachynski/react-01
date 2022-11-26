@@ -11,3 +11,12 @@ border: solid red 2px;
 .formControl.error span{
  color:red;
 }
+
+.formControlerror input
+{
+ border: solid red 2px;
+}
+.formControl input
+{
+ border: solid black 1px;
+}
