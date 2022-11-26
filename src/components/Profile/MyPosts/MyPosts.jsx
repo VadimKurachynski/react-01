@@ -15,9 +15,7 @@ const MyPosts = (props) => {
     //     props.onPostChange(text);
     // }
      let addNewPost = (values) => {
-         // props.addPost();
         props.addPost(values.newPostBody);
-
      }
 
     return (
