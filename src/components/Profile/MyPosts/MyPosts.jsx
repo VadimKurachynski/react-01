@@ -24,10 +24,6 @@ const MyPosts = (props) => {
         <div className={s.postBlock}>
             <h3>My posts</h3>
             <div>
-                {/*<div><textarea onChange={onPostChange}value={props.profilePage.newPostText}/></div>*/}
-                {/*<div>*/}
-                {/*    <button onClick={onAddPost}>Add post</button>*/}
-                {/*</div>*/}
 
                 <AddPostReduxForm onSubmit={addNewPost}/>
             </div>
