@@ -6,14 +6,6 @@ const MyPosts = (props) => {
     let postsElements =
         props.profilePage.posts.map(p => <Post message={p.message} like={p.likesCount} id={p.id} key={p.id}/>)
 
-    // let onAddPost = () => {
-    //     props.addPost();
-    // }
-    //
-    // let onPostChange = (e) => {
-    //     let text=e.target.value;
-    //     props.onPostChange(text);
-    // }
      let addNewPost = (values) => {
         props.addPost(values.newPostBody);
      }
@@ -22,7 +14,6 @@ const MyPosts = (props) => {
         <div className={s.postBlock}>
             <h3>My posts</h3>
             <div>
-
                 <AddPostReduxForm onSubmit={addNewPost}/>
             </div>
             {postsElements}
