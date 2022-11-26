@@ -3,14 +3,15 @@ import Post from "./Post/Post";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required1} from "../../../utils/validators/validators";
 import {Textarea} from "../../FormControls/formsControls";
-const maxLength10=maxLengthCreator(10);
+
+const maxLength10 = maxLengthCreator(10);
 
 const MyPosts = (props) => {
     let postsElements =
         props.profilePage.posts.map(p => <Post message={p.message} like={p.likesCount} id={p.id} key={p.id}/>)
-     let addNewPost = (values) => {
+    let addNewPost = (values) => {
         props.addPost(values.newPostBody);
-     }
+    }
 
     return (
         <div className={s.postBlock}>
@@ -23,13 +24,16 @@ const MyPosts = (props) => {
     );
 }
 
-let AddPostForm=(props)=>{
+let AddPostForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <div><Field component={Textarea} placeholder={"add post"} name={"newPostBody"} type={"input"}   validate={[required1, maxLength10]}   /></div>
-            <div><button>Add post</button></div>
+            <div><Field component={Textarea} placeholder={"add post"} name={"newPostBody"} type={"input"}
+                        validate={[required1, maxLength10]}/></div>
+            <div>
+                <button>Add post</button>
+            </div>
         </form>
     )
 }
-const AddPostReduxForm=reduxForm({form:"profileAddPostForm"})(AddPostForm)
+const AddPostReduxForm = reduxForm({form: "profileAddPostForm"})(AddPostForm)
 export default MyPosts;

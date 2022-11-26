@@ -2,18 +2,18 @@ import React from "react";
 import s from "./FormControls.module.css";
 
 
-export const Textarea=({input,meta:{touched,error,warning},...props})=>{
+export const Textarea = ({input, meta: {touched, error, warning}, ...props}) => {
     return (
         <div className={touched && error ? s.formControlerror : s.formControl}>
             <div>
-            <textarea {...input}{...props}/>
-        </div>
+                <textarea {...input}{...props}/>
+            </div>
             {touched && error && <span>{error}</span>}
         </div>
     )
 }
 
-export const Input=({input,meta:{touched,error,warning},...props})=>{
+export const Input = ({input, meta: {touched, error, warning}, ...props}) => {
     return (
         <div className={touched && error ? s.formControlerror : s.formControl}>
             <div>
