@@ -2,7 +2,7 @@ import React from "react";
 export const Textarea=(props)=>{
     return (
         <div>
-            <textarea {...props}/>
+            <textarea {...props.input}/>
         </div>
     )
 }
