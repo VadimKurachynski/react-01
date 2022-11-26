@@ -12,26 +12,21 @@ let initialiState = {
         {id: 2, message: "Hi, how are you?", likesCount: 10},
         {id: 3, message: "it's my first post", likesCount: 21},
     ],
-    newPostText: "it-vadim",
+    // newPostText: "it-vadim",
     profile: null,
     status:"начальный",
 };
 const profileReducer = (state = initialiState, action) => {
     switch (action.type) {
         case ADD_POST: {
-            let i = state.posts.length + 1;
+
             return {
                 ...state,
-                posts: [...state.posts, {id: i, message: state.newPostText, likesCount: 15000}],
-                newPostText: "",
+                posts: [...state.posts, {id: 6, message: action.newPostBody, likesCount: 15000}],
+
             };
         }
-        case UPDATE_NEW_POST_TEXT: {
-            return {
-                ...state,
-                newPostText: action.newText,
-            };
-        }
+
         case SET_USER_PROFILE: {
             return {
                 ...state,
@@ -51,7 +46,7 @@ const profileReducer = (state = initialiState, action) => {
     }
 }
 
-export const addPostActionCreator = () => { return {type: ADD_POST}}
+export const addPostActionCreator = (newPostBody) => { return {type: ADD_POST,newPostBody}}
 export const updateNewPostTextActionCreator = (text) => { return {type: UPDATE_NEW_POST_TEXT, newText: text}}
  export const setUserProfile = (profile) => { return {type: SET_USER_PROFILE,profile}}
 export const setStatus = (status) => { return {type: SET_STATUS,status}}
