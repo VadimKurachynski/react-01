@@ -26,7 +26,7 @@ console.log("authReducer--->",state, action);
             return state;
     }
 }
-//экшин крейтер
+
 export const setAuthUserData = (userId,email,login) => ({type: SET_USER_DATA, data:{userId,email,login}})
 
 export const getAuthUserData=()=>(dispatch)=>{
@@ -38,8 +38,6 @@ export const getAuthUserData=()=>(dispatch)=>{
             dispatch(setAuthUserData(id, email, login));
         }
     });
-
-
 }
 
 
