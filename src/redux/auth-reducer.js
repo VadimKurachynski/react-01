@@ -40,16 +40,22 @@ export const getAuthUserData=()=>(dispatch)=>{
 }
 
 export const login=(email,password,rememberMe)=>(dispatch)=>{
-    autAPI.me()
+    autAPI.login(email,password,rememberMe)
         .then(response => {
             if (response.data.resultCode === 0) {
-                let {id, email, login} = response.data.data;
-                dispatch(setAuthUserData(id, email, login));
+dispatch(getAuthUserData())
             }
         });
 }
 
-
+export const logout=(email,password,rememberMe)=>(dispatch)=>{
+    autAPI.login(email,password,rememberMe)
+        .then(response => {
+            if (response.data.resultCode === 0) {
+                dispatch(getAuthUserData())
+            }
+        });
+}
 
 
 export default authReducer;
