@@ -48,7 +48,6 @@ dispatch(getAuthUserData())
             }
         });
 }
-
 export const logout=()=>(dispatch)=>{
     autAPI.logout()
         .then(response => {
