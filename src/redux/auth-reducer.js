@@ -19,7 +19,7 @@ console.log("authReducer--->",state, action);
             return {
                 ...state,
                 ...action.payload,
-                isAuth: true,
+
                 }
 
         default:
