@@ -43,14 +43,14 @@ export const getAuthUserData=()=>(dispatch)=>{
 
 export const login=(email,password,rememberMe)=>(dispatch)=>{
 
-
-
     autAPI.login(email,password,rememberMe)
         .then(response => {
             if (response.data.resultCode === 0) {
 dispatch(getAuthUserData())
             } else{
-                dispatch(stopSubmit("login",{_error: "common error"} ));
+                let message=response.data.messages.length>0?response.data.messages[0]
+                    : "some error";
+                dispatch(stopSubmit("login",{_error: message} ));
             }
         });
 }
