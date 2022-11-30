@@ -45,6 +45,9 @@ export const login=(email,password,rememberMe)=>(dispatch)=>{
         .then(response => {
             if (response.data.resultCode === 0) {
 dispatch(getAuthUserData())
+            } else{
+                let
+
             }
         });
 }
