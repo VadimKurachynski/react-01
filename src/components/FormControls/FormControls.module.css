@@ -18,3 +18,7 @@
 .formControl input {
     border: solid black 1px;
 }
+
+.formsummaryerror{
+    border: red solid 1px;
+}

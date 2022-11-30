@@ -42,13 +42,15 @@ export const getAuthUserData=()=>(dispatch)=>{
 }
 
 export const login=(email,password,rememberMe)=>(dispatch)=>{
+    let action=stopSubmit("login",{_error: "email is wrong"} );
+    dispatch(action);
+    return;
     autAPI.login(email,password,rememberMe)
         .then(response => {
             if (response.data.resultCode === 0) {
 dispatch(getAuthUserData())
             } else{
-                let action=stopSubmit("login","email is wrong");
-                dispatch(action);
+
             }
         });
 }
