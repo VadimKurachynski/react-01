@@ -42,15 +42,15 @@ export const getAuthUserData=()=>(dispatch)=>{
 }
 
 export const login=(email,password,rememberMe)=>(dispatch)=>{
-    let action=stopSubmit("login",{_error: "common error"} );
-    dispatch(action);
-    return;
+
+
+
     autAPI.login(email,password,rememberMe)
         .then(response => {
             if (response.data.resultCode === 0) {
 dispatch(getAuthUserData())
             } else{
-
+                dispatch(stopSubmit("login",{_error: "common error"} ));
             }
         });
 }
