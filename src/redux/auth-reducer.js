@@ -42,7 +42,7 @@ export const getAuthUserData=()=>(dispatch)=>{
 }
 
 export const login=(email,password,rememberMe)=>(dispatch)=>{
-    let action=stopSubmit("login",{_error: "email is wrong"} );
+    let action=stopSubmit("login",{_error: "common error"} );
     dispatch(action);
     return;
     autAPI.login(email,password,rememberMe)
