@@ -14,10 +14,11 @@ import {Component} from "react";
 import {connect} from "react-redux";
 import {getAuthUserData, logout} from "./redux/auth-reducer";
 import {compose} from "redux";
+import {initializeApp} from "./redux/app-reducer";
 
 class App extends Component {
     componentDidMount() {
-        this.props.getAuthUserData();
+        this.props.initializeApp();
     }
     render() {
         return (
@@ -48,6 +49,6 @@ class App extends Component {
 
 export default  compose(
     withRouter, //обворачиваем withRouter, если не работает Route
-    connect(null,{getAuthUserData}))(App);
+    connect(null,{initializeApp}))(App);
 
 
