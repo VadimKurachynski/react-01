@@ -13,8 +13,10 @@ import Login from "./components/Login/login";
 import {Component} from "react";
 
 class App extends Component {
+    componentDidMount() {
+        this.props.getAuthUserData();
+    }
     render() {
-
         return (
             <div className="app-wrapper">
                 <HeaderContainer/>
