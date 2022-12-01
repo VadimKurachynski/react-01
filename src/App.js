@@ -45,11 +45,9 @@ class App extends Component {
 
 
 
-//export default connect(null, {getAuthUserData})(App);
-//export default withRouter(connect(null, {getAuthUserData})(App));  //обворачиваем withRouter, если не работает Route
-//или
+
 export default  compose(
-    withRouter,
+    withRouter, //обворачиваем withRouter, если не работает Route
     connect(null,{getAuthUserData}))(App);
 
 
