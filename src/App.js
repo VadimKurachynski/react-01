@@ -11,6 +11,8 @@ import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/login";
 import {Component} from "react";
+import {connect} from "react-redux";
+import {getAuthUserData, logout} from "./redux/auth-reducer";
 
 class App extends Component {
     componentDidMount() {
@@ -39,4 +41,7 @@ class App extends Component {
     }
 }
 
-export default App;
+
+
+
+export default connect(null, {getAuthUserData})(App)
