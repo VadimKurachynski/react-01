@@ -54,7 +54,7 @@ const mapStateToProps=(state)=>({
 
 
 export default  compose(
-    withRouter, //обворачиваем withRouter, если не работает Route
+  //  withRouter, //обворачиваем withRouter, если не работает Route
     connect(mapStateToProps,{initializeApp}))(App);
 
 
