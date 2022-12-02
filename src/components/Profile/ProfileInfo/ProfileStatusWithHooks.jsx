@@ -1,6 +1,6 @@
 import React from "react";
 
-class ProfileStatus extends React.Component {
+class ProfileStatusWithHooks extends React.Component {
 
     state = {
         editMode: false,
@@ -52,4 +52,4 @@ class ProfileStatus extends React.Component {
     }
 }
 
-export default ProfileStatus;
+export default ProfileStatusWithHooks;
