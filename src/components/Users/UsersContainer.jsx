@@ -16,6 +16,14 @@ import Dialogs from "../Dialogs/Dialogs";
 import {compose} from "redux";
 import {getUserProfile} from "../../redux/profile-reducer";
 import {withRouter} from "../Profile/ProfileContainer";
+import {
+    gePageSize,
+    getCurrentPage,
+    getIsFetching,
+    getPageSize,
+    getTotalUsersCount,
+    getUsersPage
+} from "../../redux/users_selectors";
 
 
 class UsersContainer extends React.Component {
@@ -50,18 +58,29 @@ class UsersContainer extends React.Component {
     }
 }
 
+// let mapStateToProps = (state) => {
+//
+//     return {
+//         users: state.usersPage.users,
+//         pageSize: state.usersPage.pageSize,
+//         totalUsersCount: state.usersPage.totalUsersCount,
+//         currentPage: state.usersPage.currentPage,
+//         isFetching: state.usersPage.isFetching,
+//         followingInProgress:state.usersPage.followingInProgress,
+//     }
+// }
+
 let mapStateToProps = (state) => {
-
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
         followingInProgress:state.usersPage.followingInProgress,
-
     }
 }
+
 // let mapDispatchToProps = (dispatch) => {
 //     console.log("mapDispatchToProps---->UsersContainer");
 //     return {
