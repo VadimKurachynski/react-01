@@ -18,7 +18,7 @@ import {getUserProfile} from "../../redux/profile-reducer";
 import {withRouter} from "../Profile/ProfileContainer";
 import {
     gePageSize,
-    getCurrentPage,
+    getCurrentPage, getFollowingInProgress,
     getIsFetching,
     getPageSize,
     getTotalUsersCount,
@@ -77,7 +77,7 @@ let mapStateToProps = (state) => {
         totalUsersCount: getTotalUsersCount(state),
         currentPage: getCurrentPage(state),
         isFetching: getIsFetching(state),
-        followingInProgress:state.usersPage.followingInProgress,
+        followingInProgress:getFollowingInProgress(state),
     }
 }
 

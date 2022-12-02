@@ -20,7 +20,7 @@ export const getIsFetching=(state)=>{
     return state.usersPage.isFetching;
 }
 
-//
-// export const getTotalUsersCount=(state)=>{
-//     return state.usersPage.followingInProgress;
-//}
+
+export const getFollowingInProgress=(state)=>{
+    return state.usersPage.followingInProgress;
+}
