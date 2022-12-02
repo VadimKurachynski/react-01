@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import React from "react";
 import {
-    follow, getUsers, getUsersThunkCreator,
+    follow, requestUsers, getUsersThunkCreator,
     setCurrentPage,
     setTotalUsersCount,
     setUsers, toggleFollowingProgress,
@@ -21,7 +21,7 @@ import {
     getCurrentPage, getFollowingInProgress,
     getIsFetching,
     getPageSize,
-    getTotalUsersCount,
+    getTotalUsersCount, getUsers,
     getUsersPage
 } from "../../redux/users_selectors";
 
@@ -121,7 +121,7 @@ let mapStateToProps = (state) => {
 
 export default compose(
    // withAuthRedirect,
-    connect(mapStateToProps, { follow,  unfollow, setCurrentPage,  toggleFollowingProgress, getUsers,} ),
+    connect(mapStateToProps, { follow,  unfollow, setCurrentPage,  toggleFollowingProgress, getUsers: requestUsers,} ),
 )(UsersContainer);
 
 
