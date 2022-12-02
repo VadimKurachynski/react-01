@@ -1,55 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 
-class ProfileStatusWithHooks extends React.Component {
+const ProfileStatusWithHooks =(props)=>{
 
-    state = {
-        editMode: false,
-        status: this.props.status,
-    }
-
-    activateEditMode = () => {
-        this.setState({
-            editMode: true
-        })
-    }
-    deactivateEditMode = () => {
-        this.setState({
-            editMode: false
-        })
-        this.props.updateStatus(this.state.status);
-    }
-
-    onStatusChange = (e) => {
-        this.setState({
-            status: e.currentTarget.value
-
-        });
-    }
-
-    componentDidUpdate(prevProps,prevState) {
-
-        if(prevProps.status!==this.props.status){
-         this.setState({
-             status:this.props.status
-         });
-     }
-    }
-
-    render() {
-
-        return (
-
+    let stateWithSetState=useState(false);
+   let editMode=stateWithSetState[0];
+    let setEditMode=stateWithSetState[1];
+    return (
             <div>
-                {!this.state.editMode &&
-                    <div><div>статус: </div><span onClick={this.activateEditMode}>{this.props.status}     </span></div>
+                {!editMode &&
+                    <div><div>статус: </div><span >{props.status} </span></div>
                 }
-                {this.state.editMode &&
-                    <div><input onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode}
-                                value={this.state.status}/></div>
+                {editMode &&
+                    <div>
+                        <input  autoFocus={true} />
+
+                    </div>
                 }
             </div>
         )
-    }
+
 }
 
 export default ProfileStatusWithHooks;
