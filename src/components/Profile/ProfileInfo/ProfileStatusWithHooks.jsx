@@ -1,38 +1,25 @@
-import React, {useState} from "react";
-
-
-
-
-
+import React, {useEffect, useState} from "react";
 
 
 const ProfileStatusWithHooks =(props)=>{
 
-    //   let stateWithSetState=useState(false);
-    let[editMode,setEditMode]=useState(false);
+    let [editMode,setEditMode]=useState(false);
+    let [status,setStatus]=useState(props.status);
 
+    useEffect(()=>{
+        setStatus(props.status);
+    },[props.status])
 
     const activateEditMode = () => {
         setEditMode(true);
         }
-
-
     const deactivateEditMode = () => {
         setEditMode(false);
-      //  props.updateStatus(this.state.status);
+       props.updateStatus(status);
     }
-
     const onStatusChange = (e) => {
-        this.setState({
-            status: e.currentTarget.value
-
-        });
+        setStatus(e.currentTarget.value);
     }
-
-
-
-
-
     return (
             <div>
                 {!editMode &&
@@ -40,13 +27,10 @@ const ProfileStatusWithHooks =(props)=>{
                 }
                 {editMode &&
                     <div>
-                        <input  autoFocus={true} onBlur={deactivateEditMode}/>
-
+                        <input onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status} />
                     </div>
                 }
             </div>
         )
-
 }
-
 export default ProfileStatusWithHooks;
