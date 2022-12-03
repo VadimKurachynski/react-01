@@ -3,7 +3,6 @@ import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus.jsx";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-
 const ProfileInfo = (props) => {
     if(!props.profile){//если не загрузились пока данные
         return <Preloader />
@@ -18,9 +17,7 @@ const ProfileInfo = (props) => {
             <div>
                 <ProfileStatusWithHooks status ={props.status} updateStatus={props.updateStatus}/>
             </div>
-
             <div className={s.descriptionBlock}>
-
             </div>
             <div>user Id:    {props.profile.userId}</div>
             <div><img src={props.profile.photos.large}/></div>
@@ -38,9 +35,7 @@ const ProfileInfo = (props) => {
             <div>lookingForAJob :</div> <div>{props.profile.lookingForAJob}</div>
             <div>lookingForAJobDescription :</div> <div>{props.profile.lookingForAJobDescription}</div>
 
-
         </div>
-
     );
 }
 export default ProfileInfo;
