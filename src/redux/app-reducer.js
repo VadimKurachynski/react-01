@@ -4,8 +4,6 @@ import {getAuthUserData} from "./auth-reducer";
 
 const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS';
 
-
-
 let initialiState = {
 initialized:false,
 
@@ -32,7 +30,6 @@ Promise.all([promise])
     .then(()=>{
         dispatch(initializedSuccess());
     })
-
 
 }
 
