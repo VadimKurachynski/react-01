@@ -13,8 +13,9 @@ test('new post', () => {
         ]
 
     };
-    let newState=profileReducer({},{action});
+    let newState=profileReducer(state,action);
 
+    expect(newState.posts.length).toBe(4);
 });
 
 
