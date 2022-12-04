@@ -26,7 +26,6 @@ const MyPosts = React.memo(props => {
     );
 });
 
-
 let AddPostForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
