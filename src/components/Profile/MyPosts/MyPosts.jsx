@@ -8,8 +8,13 @@ import {Component, PureComponent} from "react";
 const maxLength10 = maxLengthCreator(10);
 
 class MyPosts extends Component {
+//componentDidMount() {
+//     setTimeout(()=>{
+//         this.setState({a:12});
+//     },2000)
+// }
 
-     shouldComponentUpdate(nextProps, nextState, nextContext) {
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
          return nextProps != this.props || nextState !=this.state;
      }
     render() {
