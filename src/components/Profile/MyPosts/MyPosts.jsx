@@ -10,15 +10,10 @@ const maxLength10 = maxLengthCreator(10);
 class MyPosts extends Component {
 
      shouldComponentUpdate(nextProps, nextState, nextContext) {
-         return nextProps!=this.props;
-
+         return nextProps != this.props || nextState !=this.state;
      }
-
     render() {
         console.log("render")
-        console.log(this.props)
-
-
 
         let postsElements =
             this.props.profilePage.posts.map(p => <Post message={p.message} like={p.likesCount} id={p.id} key={p.id}/>)
