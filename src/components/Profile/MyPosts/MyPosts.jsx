@@ -3,13 +3,23 @@ import Post from "./Post/Post";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required1} from "../../../utils/validators/validators";
 import {Textarea} from "../../FormControls/formsControls";
-import {Component} from "react";
+import {Component, PureComponent} from "react";
 
 const maxLength10 = maxLengthCreator(10);
 
 class MyPosts extends Component {
+
+     shouldComponentUpdate(nextProps, nextState, nextContext) {
+         return nextProps!=this.props;
+
+     }
+
     render() {
-        console.log("mypostsrender")
+        console.log("render")
+        console.log(this.props)
+
+
+
         let postsElements =
             this.props.profilePage.posts.map(p => <Post message={p.message} like={p.likesCount} id={p.id} key={p.id}/>)
         let addNewPost = (values) => {
