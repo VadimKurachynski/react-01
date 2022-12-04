@@ -7,18 +7,14 @@ import {Component, PureComponent} from "react";
 
 const maxLength10 = maxLengthCreator(10);
 
-class MyPosts extends Component {
-//componentDidMount() {
-//     setTimeout(()=>{
-//         this.setState({a:12});
-//     },2000)
-// }
+class MyPosts extends PureComponent {
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //      return nextProps !== this.props || nextState !==this.state;
+    //  }
 
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-         return nextProps != this.props || nextState !=this.state;
-     }
     render() {
-        console.log("render")
+        console.log("render yo")
+        console.log(this.props)
 
         let postsElements =
             this.props.profilePage.posts.map(p => <Post message={p.message} like={p.likesCount} id={p.id} key={p.id}/>)
