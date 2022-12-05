@@ -6,24 +6,9 @@ import {Paginator} from "../common/Paginator/Paginator";
 
 
 let Users = ({currentPage,onPageChanged, totalUsersCount,pageSize,...props}) => {
-    // debugger;
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-    let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i);
-    }
+
     return <div>
-        {/*<div>*/}
-        {/*    {pages.map(p => {*/}
-        {/*            return (*/}
-        {/*                <span className={props.currentPage === p ? s.selectedPage : s.selectedPagenot}*/}
-        {/*                      onClick={(e) => {*/}
-        {/*                          props.onPageChanged(p);*/}
-        {/*                      }}>{p} </span>*/}
-        {/*            )*/}
-        {/*        }*/}
-        {/*    )}*/}
-        {/*</div>*/}
+
 
         <Paginator currentPage={currentPage} onPageChanged={onPageChanged} totalUsersCount={totalUsersCount} pageSize={pageSize}/>
 
