@@ -1,0 +1,12 @@
+img{
+    width: 60px;
+    height: 60px;
+}
+.selectedPage{
+    font-size: 20px;
+    font-weight: bold;
+}
+.selectedPagenot{
+    font-size: 2px;
+    font-weight:normal;
+}
