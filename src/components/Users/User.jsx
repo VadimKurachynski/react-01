@@ -5,15 +5,11 @@ import {NavLink} from "react-router-dom";
 import {Paginator} from "../common/Paginator/Paginator";
 
 
-let Users = ({currentPage,onPageChanged, totalUsersCount,pageSize, users,...props}) => {
+let User = ({currentPage,onPageChanged, totalUsersCount,pageSize, users,...props}) => {
 
-    return <div>
+    return (
 
-
-        <Paginator currentPage={currentPage} onPageChanged={onPageChanged} totalUsersCount={totalUsersCount} pageSize={pageSize}/>
-
-
-        {users.map(u => <div key={u.id}>
+      <div>
                <span>
                    <div>
                        <NavLink to={'/profile/' + u.id}>
@@ -44,10 +40,10 @@ let Users = ({currentPage,onPageChanged, totalUsersCount,pageSize, users,...prop
                    </span>
 
                </span>
-        </div>)}
+        </div>
 
-    </div>
+    )
 
 }
 
-export default Users;
+export default User;
