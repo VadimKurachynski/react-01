@@ -1,4 +1,4 @@
-import {applyMiddleware, combineReducers, legacy_createStore} from "redux";
+import {applyMiddleware, combineReducers, compose,  legacy_createStore} from "redux";
 
 import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
@@ -21,8 +21,13 @@ let reducers = combineReducers({
 
 });
 
-let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware));
+//import { createStore, applyMiddleware, compose } from 'redux';
 
-window.store = store;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = legacy_createStore(reducers,composeEnhancers( applyMiddleware(thunkMiddleware)));//для приложения redux в crome
 
+
+//let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware));
+
+window.__store__ = store;
 export default store;
