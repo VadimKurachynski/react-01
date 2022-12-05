@@ -1,9 +1,9 @@
 import s from "./Paginator.module.css"
 import React from "react";
 
-export const Paginator = (props) => {
+export const Paginator = ({totalUsersCount,pageSize,currentPage,onPageChanged}) => {
 
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    let pagesCount = Math.ceil(totalUsersCount / pageSize);
 
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
@@ -13,9 +13,9 @@ export const Paginator = (props) => {
         <div>
             {pages.map(p => {
                     return (
-                        <span className={props.currentPage === p ? s.selectedPage : s.selectedPagenot}
+                        <span className={currentPage === p ? s.selectedPage : s.selectedPagenot}
                               onClick={(e) => {
-                                  props.onPageChanged(p);
+                                  onPageChanged(p);
                               }}>{p} </span>
                     )
                 }
