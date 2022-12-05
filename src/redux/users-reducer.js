@@ -104,28 +104,24 @@ export const requestUsers = (page, pageSize) => {
 }
 
 
-
-
-export const follow =  (userId) => {
+export const follow = (userId) => {
     return async (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-       let resultCode= await usersAPI.follow(userId);
-                if (resultCode === 0) {
-                    dispatch(followSuccess(userId));
-                }
-                dispatch(toggleFollowingProgress(false, userId));
+        let resultCode = await usersAPI.follow(userId);
+        if (resultCode === 0) {
+            dispatch(followSuccess(userId));
+        }
+        dispatch(toggleFollowingProgress(false, userId));
     }
 }
-
-
 
 export const unfollow = (userId) => {
     return async (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        let resultCode=await usersAPI.unfollow(userId);
-                if (resultCode === 0) {
-                    dispatch(unfollowSuccess(userId));
-                }
-                dispatch(toggleFollowingProgress(false, userId));
+        let resultCode = await usersAPI.unfollow(userId);
+        if (resultCode === 0) {
+            dispatch(unfollowSuccess(userId));
+        }
+        dispatch(toggleFollowingProgress(false, userId));
     }
 }
