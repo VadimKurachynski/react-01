@@ -24,10 +24,10 @@ let reducers = combineReducers({
 //import { createStore, applyMiddleware, compose } from 'redux';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = legacy_createStore(reducers,composeEnhancers( applyMiddleware(thunkMiddleware)));//для приложения redux в crome
+//const store = legacy_createStore(reducers,composeEnhancers( applyMiddleware(thunkMiddleware)));//для приложения redux в crome
 
 
-//let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware));
+let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware));
 
-window.__store__ = store;
+//window.__store__ = store;
 export default store;
