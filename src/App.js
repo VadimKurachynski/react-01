@@ -37,7 +37,7 @@ class App extends Component {
                 <HeaderContainer/>
                 <Nav/>
                 <div className="app-wrapper-content">
-                   <React.Suspense fallback={<div><Preloader /></div>}>
+                   {/*<React.Suspense fallback={<div><Preloader /></div>}>*/}
                     <Routes>
                         <Route path="/profile/:userId" element={<ProfileContainer/>}/>
                         <Route path="/profile" element={<ProfileContainer/>}/>
@@ -52,7 +52,7 @@ class App extends Component {
                         <Route path="/settins" element={<Settins/>}/>
                         <Route path="/login" element={<Login/>}/>
                     </Routes>
-                    </React.Suspense>
+                    {/*</React.Suspense>*/}
                 </div>
             </div>
 
