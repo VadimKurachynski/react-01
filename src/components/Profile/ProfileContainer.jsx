@@ -42,7 +42,8 @@ class ProfileContainer extends React.Component {
                     isOwner={!this.props.match.params.useId}
                      profile={this.props.profile}
                      status={this.props.status}
-                     updateStatus={this.props.updateStatus}/>
+                     updateStatus={this.props.updateStatus}
+                    savePhoto={this.props.savePhoto}/>
         );
     }
 }

@@ -9,7 +9,9 @@ const ProfileInfo = (props) => {
 
 
     const mainPhotoSelected=(e)=>{
-
+if(e.target.files.length){
+    props.savePhoto(e.target.files[0]);
+}
     }
 
 
