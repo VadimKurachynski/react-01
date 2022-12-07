@@ -28,8 +28,11 @@ class ProfileContainer extends React.Component {
         this.refreshProfile();
     }
 
-    componentDidUpdate() {
-        this.refreshProfile();
+    componentDidUpdate(prevProps,prevState,shapshot) {
+        if (this.props.match.params.userId!=prevProps.match.params.useId){
+            this.refreshProfile();
+        }
+
     }
 
     render() {
