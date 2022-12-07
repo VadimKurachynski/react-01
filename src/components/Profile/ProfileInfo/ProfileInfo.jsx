@@ -1,7 +1,7 @@
 import s from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
-
+import userPhoto from "../../../assets/img/user.png";
 const ProfileInfo = (props) => {
     if(!props.profile){//если не загрузились пока данные
         return <Preloader />
@@ -19,8 +19,10 @@ const ProfileInfo = (props) => {
             <div className={s.descriptionBlock}>
             </div>
             <div>user Id:    {props.profile.userId}</div>
-            <div><img src={props.profile.photos.large}/></div>
+
+            <div><img src={props.profile.photos.large || userPhoto} className={s.mainFhoto}/></div>
             <div> <img src={props.profile.photos.small}/></div>
+
             <div>о бо мне:  {props.profile.aboutMe}</div>
             <div>контакты:</div>
             <div>{props.profile.contacts.github}</div>

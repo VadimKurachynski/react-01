@@ -8,3 +8,7 @@
 .descriptionBlock{
     padding: 20px;
 }
+
+.mainFhoto{
+    max-width: 200px;
+}

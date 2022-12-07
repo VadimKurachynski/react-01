@@ -18,15 +18,19 @@ componentDidMount() {
 let userId=this.props.match.params.userId;
 if(!userId) {
     userId= this.props.autorizedUserId;
-
 };
-
-
-
-
 this.props.getUserProfile(userId);
 this.props.getStatus(userId);
 }
+
+    componentDidUpdate() {
+        let userId=this.props.match.params.userId;
+        if(!userId) {
+            userId= this.props.autorizedUserId;
+        };
+        this.props.getUserProfile(userId);
+        this.props.getStatus(userId);
+    }
     render() {
 
         return (
