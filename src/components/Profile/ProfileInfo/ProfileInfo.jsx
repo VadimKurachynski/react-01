@@ -7,6 +7,12 @@ const ProfileInfo = (props) => {
         return <Preloader />
     }
 
+
+    const mainPhotoSelected=(e)=>{
+
+    }
+
+
     return (
         <div>
             <div className={s.cont_img}>
@@ -21,7 +27,7 @@ const ProfileInfo = (props) => {
             <div>user Id:    {props.profile.userId}</div>
 
             <div><img src={props.profile.photos.large || userPhoto} className={s.mainFhoto}/></div>
-
+            {props.isOwner && <input type={"file"} onChange={mainPhotoSelected}/>}
             <div> <img src={props.profile.photos.small}/></div>
 
             <div>о бо мне:  {props.profile.aboutMe}</div>

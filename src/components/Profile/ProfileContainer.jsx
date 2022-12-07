@@ -39,7 +39,7 @@ class ProfileContainer extends React.Component {
 
         return (
             <Profile {...this.props}
-                    isOwner={!!this.props.match.params.useId}
+                    isOwner={!this.props.match.params.useId}
                      profile={this.props.profile}
                      status={this.props.status}
                      updateStatus={this.props.updateStatus}/>
