@@ -14,7 +14,6 @@ if(e.target.files.length){
 }
     }
 
-
     return (
         <div>
             <div className={s.cont_img}>
