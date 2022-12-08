@@ -6,7 +6,6 @@ import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required1} from "../../utils/validators/validators";
 import {Textarea} from "../FormControls/formsControls";
 const maxLength10=maxLengthCreator(10);
-
 const Dialogs = (props) => {
 
     let dialogsElements = props.dialogsPage.dialogs.map((d) => <DialogItem name={d.name} id={d.id} key={d.id}/>);
