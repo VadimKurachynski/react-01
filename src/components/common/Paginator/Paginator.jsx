@@ -39,11 +39,3 @@ export const Paginator = ({totalItemsCount,pageSize,currentPage,onPageChanged, p
 
  export default Paginator;
 
-
-// return <span className={ cn({
-//     [s.selectedPage]:currentPage===p
-// },s.pageNumber)}
-//              key={p}
-//              onclick={(e)=>{
-//                  onPageChanged(p);
-//              }}>{p}</span>
