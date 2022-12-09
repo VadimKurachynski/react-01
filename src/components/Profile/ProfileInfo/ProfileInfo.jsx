@@ -51,7 +51,9 @@ const ProfileInfo = (props) => {
             </div>
 
             <div>
-                <b>Contacts</b>:{Object.keys(props.profile.contacts)}
+                <b>Contacts</b>:{Object.keys(props.profile.contacts).map(key=>
+            <Contact contactTitle={key} contactValue={props.profile.contacts[key]}/>
+            )}
             </div>
 
 
