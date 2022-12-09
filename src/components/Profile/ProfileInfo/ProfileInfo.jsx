@@ -33,6 +33,11 @@ const ProfileInfo = (props) => {
             {props.isOwner && <input type={"file"} onChange={mainPhotoSelected}/>}
             <div><img src={props.profile.photos.small}/></div>
 
+
+
+            <div>
+                <b>Full name</b>:{props.profile.fullName}
+            </div>
             <div>
                 <b>Loking for a job</b>:{props.profile.lokingForAJob ? "yes" : "no"}
             </div>
@@ -42,9 +47,12 @@ const ProfileInfo = (props) => {
             </div>
             }
             <div>
-                <b>About me</b>:{props.profile.aboutMe}
+                <b>About Me</b>:{props.profile.about}
             </div>
 
+            <div>
+                <b>Contacts</b>:{Object.keys(props.profile.contacts)}
+            </div>
 
 
 
@@ -65,4 +73,12 @@ const ProfileInfo = (props) => {
         </div>
     );
 }
+
+
+const Contact=({contactTitle, contactValue})=> {
+    return <div><b>{contactTitle}</b>: {contactValue}</div>
+
+}
+
+
 export default ProfileInfo;
