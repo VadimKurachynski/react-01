@@ -17,43 +17,22 @@ const ProfileInfo = (props) => {
 
     return (
         <div>
-            <div className={s.cont_img}>
+            {/*<div className={s.cont_img}>*/}
+            {/*</div>*/}
+            {/*<div className={s.descriptionBlock}>*/}
+            {/*</div>*/}
 
-            </div>
-
-
-
-            <div className={s.descriptionBlock}>
-            </div>
             <div>user Id: {props.profile.userId}</div>
             <div><img src={props.profile.photos.large || userPhoto} className={s.mainFhoto}/></div>
             {props.isOwner && <input type={"file"} onChange={mainPhotoSelected}/>}
             <div><img src={props.profile.photos.small}/></div>
 
-            <div>
-                <b>Full name</b>:{props.profile.fullName}
-            </div>
-            <div>
-                <b>Loking for a job</b>:{props.profile.lokingForAJob ? "yes" : "no"}
-            </div>
-            {props.profile.lokingForAJob &&
-                <div>
-                    <b>My professional skills</b>:{props.profile.lokingForAJobDescription}
-                </div>
-            }
-            <div>
-                <b>About Me</b>:{props.profile.about}
-            </div>
-            <div>
-                <b>Contacts</b>:{Object.keys(props.profile.contacts).map(key =>
-                <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]}/>
-            )}
-            </div>
+
+
 
             <div>
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             </div>
-
 
 
         </div>
@@ -61,7 +40,32 @@ const ProfileInfo = (props) => {
 }
 
 
-const ProfileData = ({profile}) => {
+const ProfileData = ({props}) => {
+    return( <div>
+                <div>
+                    <b>Full name</b>:{props.profile.fullName}
+                </div>
+                <div>
+                    <b>Loking for a job</b>:{props.profile.lokingForAJob ? "yes" : "no"}
+                </div>
+                {props.profile.lokingForAJob &&
+                    <div>
+                        <b>My professional skills</b>:{props.profile.lokingForAJobDescription}
+                    </div>
+                }
+                <div>
+                    <b>About Me</b>:{props.profile.about}
+                </div>
+                <div>
+                    <b>Contacts</b>:{Object.keys(props.profile.contacts).map(key =>
+                    <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]}/>
+                )}
+                </div>
+            </div>
+
+
+
+        )
 
 
 }
