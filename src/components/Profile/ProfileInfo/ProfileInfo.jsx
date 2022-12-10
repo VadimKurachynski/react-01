@@ -30,8 +30,8 @@ const ProfileInfo = (props) => {
             {props.isOwner && <input type={"file"} onChange={mainPhotoSelected}/>}
             <div><img src={props.profile.photos.small}/></div>
 
-            {editMode? <ProfileDataForm props={props}/>:<ProfileData props={props}/>}
-            <ProfileData goToEditMode={()=>{setEditMode(true)}} props={props}/>
+            {editMode? <ProfileDataForm props={props}/>:<ProfileData goToEditMode={()=>{setEditMode(true)}} props={props}/>}
+            {/*<ProfileData goToEditMode={()=>{setEditMode(true)}} props={props}/>*/}
 
             <div>
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
@@ -75,25 +75,7 @@ const ProfileData = ({props,goToEditMode}) => {
 }
 const ProfileDataForm = ({props}) => {
     return (<div>
-            <div>
-                <b>Full name</b>:{props.profile.fullName}
-            </div>
-            <div>
-                <b>Looking for a job</b>:{props.profile.lokingForAJob ? "yes" : "no"}
-            </div>
-            {props.profile.lookingForAJob &&
-                <div>
-                    <b>My professional skills</b>:{props.profile.lokingForAJobDescription}
-                </div>
-            }
-            <div>
-                <b>About Me</b>:{props.profile.about}
-            </div>
-            <div>
-                <b>Contacts</b>:{Object.keys(props.profile.contacts).map(key =>
-                <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]}/>
-            )}
-            </div>
+          FORM
         </div>
 
 
