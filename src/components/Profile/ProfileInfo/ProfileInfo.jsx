@@ -49,28 +49,14 @@ const ProfileInfo = (props) => {
             <div>
                 <b>About Me</b>:{props.profile.about}
             </div>
-
             <div>
                 <b>Contacts</b>:{Object.keys(props.profile.contacts).map(key=>
-               <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]}/>
+               <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]} />
+
             )}
             </div>
 
 
-
-
-            {/*<div>о бо мне:  {props.profile.aboutMe}</div>*/}
-            {/*<div>контакты:</div>*/}
-            {/*<div>{props.profile.contacts.github}</div>*/}
-            {/*<div>{props.profile.contacts.instagram}</div>*/}
-            {/*<div>{props.profile.contacts.twitter}</div>*/}
-            {/*<div>{props.profile.contacts.vk}</div>*/}
-            {/*<div>{props.profile.contacts.mainLink}</div>*/}
-            {/*<div>{props.profile.contacts.website}</div>*/}
-            {/*<div>{props.profile.contacts.youtube}</div>*/}
-            {/*<div>Полное имя:</div> <div>{props.profile.fullName}</div>*/}
-            {/*<div>lookingForAJob :</div> <div>{props.profile.lookingForAJob}</div>*/}
-            {/*<div>lookingForAJobDescription :</div> <div>{props.profile.lookingForAJobDescription}</div>*/}
 
         </div>
     );
