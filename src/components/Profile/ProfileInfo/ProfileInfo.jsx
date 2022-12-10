@@ -2,8 +2,14 @@ import s from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from "../../../assets/img/user.png";
+import {useState} from "react";
 
 const ProfileInfo = (props) => {
+
+    let [editMode,setEditMode]=useState(false);
+
+
+
     if (!props.profile) {//если не загрузились пока данные
         return <Preloader/>
     }
