@@ -21,9 +21,7 @@ const ProfileInfo = (props) => {
 
             </div>
 
-            <div>
-                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
-            </div>
+
 
             <div className={s.descriptionBlock}>
             </div>
@@ -51,6 +49,13 @@ const ProfileInfo = (props) => {
                 <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]}/>
             )}
             </div>
+
+            <div>
+                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+            </div>
+
+
+
         </div>
     );
 }
