@@ -31,7 +31,7 @@ const ProfileInfo = (props) => {
             <div><img src={props.profile.photos.small}/></div>
 
             {editMode? <ProfileDataForm props={props}/>:<ProfileData props={props}/>}
-            <ProfileData props={props}/>
+            <ProfileData goToEditMode={()=>{setEditMode(true)}} props={props}/>
 
             <div>
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
@@ -43,8 +43,10 @@ const ProfileInfo = (props) => {
 }
 
 
-const ProfileData = ({props}) => {
+const ProfileData = ({props,goToEditMode}) => {
+
     return (<div>
+        {props.isOwner && <div><button onClick={goToEditMode}>edit</button></div>}
             <div>
                 <b>Full name</b>:{props.profile.fullName}
             </div>
