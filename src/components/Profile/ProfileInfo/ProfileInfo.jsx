@@ -48,7 +48,7 @@ const ProfileInfo = (props) => {
 
 const ProfileData = ({props,goToEditMode}) => {
 
-    return (<div>
+    return <div>
         {props.isOwner && <div><button onClick={goToEditMode}>edit</button></div>}
             <div>
                 <b>Full name</b>:{props.profile.fullName}
@@ -70,9 +70,6 @@ const ProfileData = ({props,goToEditMode}) => {
             )}
             </div>
         </div>
-
-
-    )
 
 }
 
