@@ -1,10 +1,11 @@
 import {createField, Input, Textarea} from "../../FormControls/formsControls";
 import {reduxForm} from "redux-form";
+import handleSubmit from "redux-form/lib/handleSubmit";
 
 
-const ProfileDataForm = ({props}) => {
-    return <form>
-        {<div><button onClick={()=>{}}>save</button></div>}
+const ProfileDataForm = ({handleSubmit,props}) => {
+    return <form onSubmit={handleSubmit}>
+        <div><button>save</button></div>
         <div>
             <b>Full name</b>:{createField("Full name","fullName",[],Input)}
         </div>
