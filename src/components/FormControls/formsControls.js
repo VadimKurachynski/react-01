@@ -31,6 +31,6 @@ export const createField=(placeholder,name,validators, component, props={}, text
                validate={validators}
                component={component}
             {...props}
-            />
+            />{text}
     </div>
 )

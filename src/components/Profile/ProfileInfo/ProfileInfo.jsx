@@ -4,6 +4,8 @@ import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from "../../../assets/img/user.png";
 import {useState} from "react";
 import ProfileDataForm from "./ProfileDataForm";
+import {createField, Input} from "../../FormControls/formsControls";
+
 
 const ProfileInfo = (props) => {
 
@@ -51,7 +53,7 @@ const ProfileData = ({props,goToEditMode}) => {
     return <div>
         {props.isOwner && <div><button onClick={goToEditMode}>edit</button></div>}
             <div>
-                <b>Full name</b>:{props.profile.fullName}
+                <b>Full name</b>:{props.fullName}
             </div>
             <div>
                 <b>Looking for a job</b>:{props.profile.lokingForAJob ? "yes" : "no"}
