@@ -1,4 +1,4 @@
-import {createField, Input} from "../../FormControls/formsControls";
+import {createField, Input, Textarea} from "../../FormControls/formsControls";
 import {reduxForm} from "redux-form";
 
 
@@ -9,16 +9,17 @@ const ProfileDataForm = ({props}) => {
             <b>Full name</b>:{createField("Full name","fullName",[],Input)}
         </div>
         <div>
-            <b>Looking for a job</b>:
-            { createField("","lokingForAJob",[],Input,{type:"checkbox"})}
+            <b>Looking for a job</b>:{ createField("","lokingForAJob",[],Input,{type:"checkbox"})}
         </div>
-        {props.profile.lookingForAJob &&
+
             <div>
-                <b>My professional skills</b>:{props.profile.lokingForAJobDescription}
+                <b>My professional skills</b>:
+                { createField("My professional skills","lokingForAJobDescription",[],Textarea)}
             </div>
         }
         <div>
-            <b>About Me</b>:{props.profile.about}
+            <b>About Me</b>:
+            { createField("About me","aboutMe",[],Textarea)}
         </div>
         {/*<div>*/}
         {/*    <b>Contacts</b>:{Object.keys(props.profile.contacts).map(key =>*/}
