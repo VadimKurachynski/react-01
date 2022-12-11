@@ -3,6 +3,7 @@ import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from "../../../assets/img/user.png";
 import {useState} from "react";
+import ProfileDataForm from "./ProfileDataForm";
 
 const ProfileInfo = (props) => {
 
@@ -72,13 +73,6 @@ const ProfileData = ({props,goToEditMode}) => {
 
 
     )
-
-
-}
-const ProfileDataForm = ({props}) => {
-    return <div>
-          FORM
-        </div>
 
 }
 
