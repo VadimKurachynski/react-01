@@ -25,7 +25,7 @@ const ProfileInfo = (props,{saveProfile}) => {
     }
 
     const onSubmit = (formData) => {
-      console.log(formData);
+        saveProfile(formData);
     }
 
     return (
