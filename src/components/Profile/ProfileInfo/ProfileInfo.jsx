@@ -30,8 +30,10 @@ const ProfileInfo = (props) => {
             {props.isOwner && <input type={"file"} onChange={mainPhotoSelected}/>}
             <div><img src={props.profile.photos.small}/></div>
 
-            {editMode? <ProfileDataForm props={props}/>:<ProfileData goToEditMode={()=>{setEditMode(true)}} props={props}/>}
-            {/*<ProfileData goToEditMode={()=>{setEditMode(true)}} props={props}/>*/}
+            {editMode?
+                <ProfileDataForm props={props}/>:
+                <ProfileData goToEditMode={()=>{setEditMode(true)}} props={props} isOwner={props.isOwner}/>}
+
 
             <div>
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
@@ -74,13 +76,9 @@ const ProfileData = ({props,goToEditMode}) => {
 
 }
 const ProfileDataForm = ({props}) => {
-    return (<div>
+    return <div>
           FORM
         </div>
-
-
-    )
-
 
 }
 
