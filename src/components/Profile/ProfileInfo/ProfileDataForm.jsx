@@ -9,7 +9,8 @@ const ProfileDataForm = ({props}) => {
             <b>Full name</b>:{createField("Full name","fullName",[],Input)}
         </div>
         <div>
-            <b>Looking for a job</b>:{props.profile.lokingForAJob ? "yes" : "no"}
+            <b>Looking for a job</b>:
+            { createField("","lokingForAJob",[],Input,{type:"checkbox"})}
         </div>
         {props.profile.lookingForAJob &&
             <div>
