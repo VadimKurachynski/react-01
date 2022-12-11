@@ -7,7 +7,7 @@ import ProfileDataForm from "./ProfileDataForm";
 import {createField, Input} from "../../FormControls/formsControls";
 
 
-const ProfileInfo = (props) => {
+const ProfileInfo = (props,{saveProfile}) => {
 
     let [editMode,setEditMode]=useState(false);
 
@@ -24,17 +24,19 @@ const ProfileInfo = (props) => {
         }
     }
 
+    const onSubmit = (formData) => {
+      console.log(formData);
+    }
+
     return (
         <div>
-
-
             <div>user Id: {props.profile.userId}</div>
             <div><img src={props.profile.photos.large || userPhoto} className={s.mainFhoto}/></div>
             {props.isOwner && <input type={"file"} onChange={mainPhotoSelected}/>}
             <div><img src={props.profile.photos.small}/></div>
 
             {editMode?
-                <ProfileDataForm props={props}/>:
+                <ProfileDataForm props={props} onSubmit={onSubmit}/>:
                 <ProfileData goToEditMode={()=>{setEditMode(true)}} props={props} isOwner={props.isOwner}/>}
 
 
