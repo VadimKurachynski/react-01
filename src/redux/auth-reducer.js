@@ -61,6 +61,21 @@ export const login = (email, password, rememberMe) => async (dispatch) => {
     }
 }
 
+
+export const getCaptchaUrl = (email, password, rememberMe) => async (dispatch) => {
+    let response = await autAPI.login(email, password, rememberMe);
+    if (response.data.resultCode === 0) {
+        dispatch(getAuthUserData())
+    } else {
+        let message = response.data.messages.length > 0 ? response.data.messages[0]
+            : "some error";
+        dispatch(stopSubmit("login", {_error: message}));
+    }
+}
+
+
+
+
 export const logout = () => async (dispatch) => {
     let response = await autAPI.logout();
     if (response.data.resultCode === 0) {
