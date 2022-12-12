@@ -2,6 +2,7 @@ import {autAPI, securityAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
 
 const SET_USER_DATA = 'samurai-network/auth/SET_USER_DATA';
+const GET_CAPTCHA_URL_SUCCESS = 'samurai-network/auth/GET_CAPTCHA_URL_SUCCESS';
 
 
 let initialiState = {
@@ -9,6 +10,7 @@ let initialiState = {
     email: null,
     login: null,
     isAuth: false,
+    captchaUrl:null,
 };
 
 const authReducer = (state = initialiState, action) => {
@@ -63,14 +65,11 @@ export const login = (email, password, rememberMe) => async (dispatch) => {
 
 
 export const getCaptchaUrl = () => async (dispatch) => {
-    let response = await securityAPI.getCaptchaUrl();
-    const captchaUrl=response.data.url;
-        let message = response.data.messages.length > 0 ? response.data.messages[0]
+    const response = await securityAPI.getCaptchaUrl();
+    const captchaUrl = response.data.url;
 
-        dispatch(stopSubmit("login", {_error: message}));
-    }
+    dispatch(stopSubmit("login", {_error: message}));
 }
-
 
 
 
