@@ -8,7 +8,7 @@ import {Navigate} from "react-router-dom";
 import s from "../FormControls/FormControls.module.css";
 
 const maxLength10 = maxLengthCreator(30);
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error,captchaUrl}) => {
 
     return (
         <form onSubmit={handleSubmit}>
@@ -22,6 +22,10 @@ const LoginForm = ({handleSubmit, error}) => {
             <div>
                 <Field component={Input} name={"rememberMe"} type={"checkbox"}/>remember me
             </div>
+
+            {captchaUrl && <img src={captchaUrl} />}
+
+
             {error && <div className={s.formSummaryError}>{error}</div>}
             <button>Login</button>
         </form>
@@ -42,11 +46,12 @@ const Login = (props) => {
     return (
         <div>
             <h2>LOGIN</h2>
-            <LoginReduxForm onSubmit={onSubmit1}/>
+            <LoginReduxForm onSubmit={onSubmit1} captchaUrl={props.captchaUrl}/>
         </div>
     );
 }
 const mapStateToProps = (state) => ({
+    captchaUrl:state.auth.captchaUrl,
     isAuth: state.auth.isAuth
 })
 
