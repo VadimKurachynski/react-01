@@ -1,4 +1,4 @@
-import {autAPI} from "../api/api";
+import {autAPI, securityAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
 
 const SET_USER_DATA = 'samurai-network/auth/SET_USER_DATA';
@@ -62,13 +62,11 @@ export const login = (email, password, rememberMe) => async (dispatch) => {
 }
 
 
-export const getCaptchaUrl = (email, password, rememberMe) => async (dispatch) => {
-    let response = await autAPI.login(email, password, rememberMe);
-    if (response.data.resultCode === 0) {
-        dispatch(getAuthUserData())
-    } else {
+export const getCaptchaUrl = () => async (dispatch) => {
+    let response = await securityAPI.getCaptchaUrl();
+    const captchaUrl=response.data.url;
         let message = response.data.messages.length > 0 ? response.data.messages[0]
-            : "some error";
+
         dispatch(stopSubmit("login", {_error: message}));
     }
 }
