@@ -25,12 +25,11 @@ const ProfileInfo = ({profile,status,updateStatus,isOwner,savePhoto,saveProfile}
     }
 
     const onSubmit = async (formData) => {
-      await saveProfile(formData)
-          .then(()=>{
+      await saveProfile(formData);
           setEditMode(false);
-      });
+      }
 
-    }
+
 
     return (
         <div>
