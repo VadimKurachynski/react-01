@@ -118,5 +118,4 @@ export const saveProfile = (profile) => async (dispatch,getState) => {
       //  dispatch(stopSubmit("edit-profile", {"contacts":{"facebook": response.data.messages[0]} }));
     }
 }
-
 export default profileReducer;
