@@ -39,8 +39,6 @@ export const getCaptchaUrlSuccess = (captchaUrl) => ({
 
 })
 
-
-
 export const getAuthUserData = () => async (dispatch) => {
     let response = await autAPI.me();
     if (response.data.resultCode === 0) {
