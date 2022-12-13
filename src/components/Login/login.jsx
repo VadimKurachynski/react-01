@@ -1,6 +1,6 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
-import {Input} from "../FormControls/formsControls";
+import {createField, Input} from "../FormControls/formsControls";
 import {maxLengthCreator, required1} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
@@ -24,7 +24,7 @@ const LoginForm = ({handleSubmit, error,captchaUrl}) => {
             </div>
 
             {captchaUrl && <img src={captchaUrl} />}
-
+            {captchaUrl &&  createField ("Symbol from image","captcha",[],Input,{})}
 
             {error && <div className={s.formSummaryError}>{error}</div>}
             <button>Login</button>
@@ -36,7 +36,7 @@ const LoginReduxForm = reduxForm({form: 'login'})(LoginForm)
 const Login = (props) => {
     const onSubmit1 = (formData) => {
         console.log(formData);
-        props.login(formData.email, formData.password, formData.rememberMe)
+        props.login(formData.email, formData.password, formData.rememberMe,formData.captcha)
     }
 
     if (props.isAuth) {
