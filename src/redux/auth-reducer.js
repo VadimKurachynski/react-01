@@ -75,14 +75,11 @@ export const login = (email, password, rememberMe,captcha) => async (dispatch) =
     }
 }
 
-
 export const getCaptchaUrl = () => async (dispatch) => {
     const response = await securityAPI.getCaptchaUrl();
     const captchaUrl = response.data.url;
     dispatch(getCaptchaUrlSuccess(captchaUrl));
 }
-
-
 
 export const logout = () => async (dispatch) => {
     let response = await autAPI.logout();
