@@ -1,9 +1,7 @@
 .header {
-
   grid-area: h;
   background-color: beige;
 }
-
 .head{
   display: flex;
   flex-direction: row;

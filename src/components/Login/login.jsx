@@ -6,7 +6,6 @@ import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Navigate} from "react-router-dom";
 import s from "../FormControls/FormControls.module.css";
-
 const maxLength10 = maxLengthCreator(30);
 const LoginForm = ({handleSubmit, error,captchaUrl}) => {
 
