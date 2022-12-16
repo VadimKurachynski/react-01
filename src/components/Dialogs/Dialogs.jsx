@@ -15,7 +15,6 @@ const Dialogs = (props) => {
         props.addMessage(values.newMessageBody);
 
     }
-
     return (
         <div className={s.content}>
             <div className={s.dialogs}>

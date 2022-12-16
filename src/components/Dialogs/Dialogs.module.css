@@ -2,15 +2,12 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
-
 .dialogs{
     background: coral;
 }
-
 .messages{
     background: chartreuse;
 }
-
 .dialogsItems{
 color: coral;
 }
