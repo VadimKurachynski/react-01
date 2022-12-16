@@ -36,5 +36,4 @@ export const Paginator = ({totalItemsCount,pageSize,currentPage,onPageChanged, p
 
  }
 
-
  export default Paginator;
