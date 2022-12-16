@@ -6,7 +6,6 @@ import {useState} from "react";
 import ProfileDataForm from "./ProfileDataForm";
 
 
-
 const ProfileInfo = ({profile,status,updateStatus,isOwner,savePhoto,saveProfile}) => {
 
     let [editMode,setEditMode]=useState(false);
@@ -32,9 +31,7 @@ const ProfileInfo = ({profile,status,updateStatus,isOwner,savePhoto,saveProfile}
 
       }
 
-
-
-    return (
+   return (
         <div>
             <div>user Id: {profile.userId}</div>
             <div><img src={profile.photos.large || userPhoto} className={s.mainFhoto}/></div>

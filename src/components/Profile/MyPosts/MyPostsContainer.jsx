@@ -2,11 +2,10 @@ import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../red
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 
-
 let mapStateToProps = (state) => {
 
-  return {
-        profilePage:state.profilePage
+    return {
+        profilePage: state.profilePage
     }
 }
 let mapDispatchToProps = (dispatch) => {
@@ -16,5 +15,5 @@ let mapDispatchToProps = (dispatch) => {
         },
     }
 }
-const PostsContainer = connect(mapStateToProps,mapDispatchToProps)(MyPosts);
-export default  PostsContainer;
+const PostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
+export default PostsContainer;

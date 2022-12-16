@@ -3,7 +3,6 @@ import {reduxForm} from "redux-form";
 import s from "./ProfileInfo.module.css";
 import React from "react";
 
-
 const ProfileDataForm = ({handleSubmit,profile,error}) => {
 
     return <form onSubmit={handleSubmit}>
