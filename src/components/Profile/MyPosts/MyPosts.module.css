@@ -1,13 +1,10 @@
 .content {
     grid-area: c;
-    /*background-color: burlywood;*/
-}
-
+  }
 .content img {
     width: auto;
     height: auto;
 }
-
 .postBlock{
     padding: 20px;
     background: chartreuse;

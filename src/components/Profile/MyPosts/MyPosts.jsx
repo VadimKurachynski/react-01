@@ -5,7 +5,6 @@ import {maxLengthCreator, required1} from "../../../utils/validators/validators"
 import {Textarea} from "../../FormControls/formsControls";
 import React from "react";
 const maxLength10 = maxLengthCreator(10);
-
 const MyPosts = React.memo(props => {
 
 
