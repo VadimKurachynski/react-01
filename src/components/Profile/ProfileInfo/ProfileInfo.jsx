@@ -10,8 +10,6 @@ const ProfileInfo = ({profile,status,updateStatus,isOwner,savePhoto,saveProfile}
 
     let [editMode,setEditMode]=useState(false);
 
-
-
     if (!profile) {//если не загрузились пока данные
         return <Preloader/>
     }
@@ -51,7 +49,6 @@ const ProfileInfo = ({profile,status,updateStatus,isOwner,savePhoto,saveProfile}
         </div>
     );
 }
-
 
 const ProfileData = ({goToEditMode, isOwner,profile}) => {
 
