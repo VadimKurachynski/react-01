@@ -4,13 +4,15 @@
     height: 200px;
 
 }
-.descriptionBlock{
+
+.descriptionBlock {
     padding: 20px;
 }
-.mainFhoto{
+
+.mainFhoto {
     max-width: 200px;
 }
-.contact{
-padding-left: 10px
-;
+
+.contact {
+    padding-left: 10px;
 }
