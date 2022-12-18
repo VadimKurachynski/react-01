@@ -1,26 +1,28 @@
-img{
+img {
     width: 60px;
     height: 60px;
 }
-.selectedPage{
+
+.selectedPage {
     font-size: 20px;
     font-weight: bold;
 }
-.selectedPagenot{
+
+.selectedPagenot {
     font-size: 2px;
-    font-weight:normal;
+    font-weight: normal;
 }
 
-.paginator{
-margin: 10px;
+.paginator {
+    margin: 10px;
 }
 
-.pageNumber{
+.pageNumber {
     padding: 2px;
-    border:1px solid grey;
+    border: 1px solid grey;
 }
 
-.pageNumber.selectedPage{
+.pageNumber.selectedPage {
     font-weight: bold;
-    border-color:black;
+    border-color: black;
 }
