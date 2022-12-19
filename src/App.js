@@ -19,8 +19,6 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 // const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));// для оптимизации загрузки
 
 
-
-
 class App extends Component {
     componentDidMount() {
         this.props.initializeApp();
@@ -42,6 +40,7 @@ class App extends Component {
                         <Route path="/users" element={<UsersContainer/>}/>
                         <Route path="/settins" element={<Settins/>}/>
                         <Route path="/login" element={<Login/>}/>
+
                     </Routes>
                 </div>
             </div>
