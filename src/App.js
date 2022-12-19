@@ -20,7 +20,7 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 class App extends Component {
-catchAllUnhandledErrors=(promiseRejectionEvent)=>{
+catchAllUnhandledErrors=(reason,promise)=>{
     alert("some error");
 }
     componentDidMount() {
