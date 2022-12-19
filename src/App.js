@@ -25,7 +25,7 @@ catchAllUnhandledErrors=(promiseRejectionEvent)=>{
 }
     componentDidMount() {
         this.props.initializeApp();
-        windows.addEventListener("unhandledrejection",function (promiseRejectionEvent){
+        window.addEventListener("unhandledrejection",function (promiseRejectionEvent){
 
         });
     }
