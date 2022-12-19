@@ -25,10 +25,12 @@ catchAllUnhandledErrors=(promiseRejectionEvent)=>{
 }
     componentDidMount() {
         this.props.initializeApp();
-        window.addEventListener("unhandledrejection",function (promiseRejectionEvent){
-
-        });
+        window.addEventListener("unhandledrejection",this.catchAllUnhandledErrors);
     }
+    componentWillUnmount() {
+        window.removeEventListener("unhandledrejection",this.catchAllUnhandledErrors);
+    }
+
     render() {
         if (!this.props.initialized){ return <Preloader />}
 
