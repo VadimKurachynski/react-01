@@ -20,8 +20,14 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 class App extends Component {
+catchAllUnhandledErrors=(promiseRejectionEvent)=>{
+    alert("some error");
+}
     componentDidMount() {
         this.props.initializeApp();
+        windows.addEventListener("unhandledrejection",function (promiseRejectionEvent){
+
+        });
     }
     render() {
         if (!this.props.initialized){ return <Preloader />}
@@ -40,7 +46,6 @@ class App extends Component {
                         <Route path="/users" element={<UsersContainer/>}/>
                         <Route path="/settins" element={<Settins/>}/>
                         <Route path="/login" element={<Login/>}/>
-
                     </Routes>
                 </div>
             </div>
