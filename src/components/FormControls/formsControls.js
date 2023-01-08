@@ -13,16 +13,7 @@ const FormControl = ({input, meta: {touched, error}, children}) => {
         </div>
     )
 }
-// export const Textarea = ({input, meta: {touched, error, warning}, ...props}) => {
-//     return (
-//         <div className={touched && error ? s.formControlerror : s.formControl}>
-//             <div>
-//                 <textarea {...input}{...props}/>
-//             </div>
-//             {touched && error && <span>{error}</span>}
-//         </div>
-//     )
-// }
+
 
 export const Textarea = (props) => {
     const {input, meta, child, ...restProps} = props;
